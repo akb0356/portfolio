@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO</title>
+    <!-- jQuery -->
+    <script defer src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/71fdac82e6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- googleicon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Featherlight -->
+    <link
+      href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script
+      src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
+    <!-- custom css & js-->
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-------- header -------->
+      <header id="pcHeader">
+        <h1 class="logo">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.2353 32.0471L21.1765 37.2001C20.8941 38.4001 20.8235 39.1059 19.553 39.1059H13.0588C13.0588 39.2471 13.0588 39.3177 13.0588 39.4589H21.0353H21.8824L22.6588 32.0471H22.2353Z"
+              />
+              <path
+                d="M17.0117 25.3412C17.0117 25.8353 16.8706 26.3294 16.5176 26.6824C16.1647 27.0353 15.6706 27.2471 15.1059 27.1765H10.7294V23.2235V22.5177V19.1294V16.0941C10.5176 15.8824 10.3764 15.6706 10.0941 15.5294H3.88232V15.9529H7.55291V19.2V23.5059V23.7882V27.7412V39.0353H3.88232V39.3882H7.55291H10.6588C10.6588 39.1059 10.7294 38.8235 10.7294 38.5412V27.8118V27.6H15.1059C15.6 27.6 17.0117 27.8824 17.0117 29.3647V30.8471H17.3647V27.8824V27.0353V24H17.0117V25.3412Z"
+              />
+              <path
+                d="M21.9529 15.6H21.1059H14.4706C14.5412 15.7412 14.5412 15.8823 14.6118 15.9529H19.4823C20.8941 15.9529 21.1059 16.5882 21.3176 18L21.8118 22.3059H22.3059L21.9529 15.6Z"
+              />
+              <path
+                d="M6.28235 23.3648C0.705882 22.4471 0.352941 17.4353 0.352941 16.5177H0V23.9295H0.352941V23.3648C0.352941 22.1648 0.988235 21.1765 1.97647 21.8118C2.96471 22.8706 4.30588 23.5765 6.28235 23.8589V23.3648Z"
+              />
+              <path
+                d="M10.3059 10.8706C2.61179 7.34118 3.24708 5.01177 3.24708 3.95294C3.24708 2.54118 4.23532 0.423529 7.97649 0.423529C11.7177 0.423529 14.5412 3.95294 14.5412 6.63529H14.8941V0.0705882H14.5412V2.75294C14.5412 3.67059 14.0471 3.67059 13.6236 3.10588C13.6236 3.03529 13.553 3.03529 13.553 2.96471C12.2118 1.2 10.0236 0 7.97649 0C1.97649 0 0.635318 3.52941 0.705906 6.14118C0.776495 9.17647 3.31767 11.5059 7.97649 13.4824C12.4941 15.3176 13.4118 17.6471 13.4824 19.0588C13.553 19.9765 13.9059 23.5765 8.04708 23.5765C7.83532 23.5765 7.69414 23.5059 7.55297 23.5059V23.9294C7.69414 23.9294 7.83532 23.9294 7.97649 23.9294C13.8353 23.9294 16.2353 20.9647 16.2353 18.2118C16.2353 16.2353 15.953 13.4118 10.3059 10.8706Z"
+              />
+              <path
+                d="M29.7176 40.6588C29.7176 45.7411 26.6117 50.1176 20.8235 50.1176C15.0353 50.1176 11.9294 45.8117 11.9294 40.7294C11.9294 35.647 14.9647 30.9176 20.8235 30.9176C26.6823 30.9176 29.7176 35.5764 29.7176 40.6588ZM27.1764 40.7294C27.1764 36.4941 25.5529 31.2705 20.8235 31.2705C16.0941 31.2705 14.4706 36.5647 14.4706 40.7294C14.4706 44.9647 16.0235 49.7647 20.8235 49.7647C25.6235 49.7647 27.1764 44.9647 27.1764 40.7294Z"
+              />
+            </svg>
+          </a>
+        </h1>
+        <nav>
+          <ul class="gnbWrap">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <header id="mobileHeader">
+        <h1 class="logo">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.2353 32.0471L21.1765 37.2001C20.8941 38.4001 20.8235 39.1059 19.553 39.1059H13.0588C13.0588 39.2471 13.0588 39.3177 13.0588 39.4589H21.0353H21.8824L22.6588 32.0471H22.2353Z"
+              />
+              <path
+                d="M17.0117 25.3412C17.0117 25.8353 16.8706 26.3294 16.5176 26.6824C16.1647 27.0353 15.6706 27.2471 15.1059 27.1765H10.7294V23.2235V22.5177V19.1294V16.0941C10.5176 15.8824 10.3764 15.6706 10.0941 15.5294H3.88232V15.9529H7.55291V19.2V23.5059V23.7882V27.7412V39.0353H3.88232V39.3882H7.55291H10.6588C10.6588 39.1059 10.7294 38.8235 10.7294 38.5412V27.8118V27.6H15.1059C15.6 27.6 17.0117 27.8824 17.0117 29.3647V30.8471H17.3647V27.8824V27.0353V24H17.0117V25.3412Z"
+              />
+              <path
+                d="M21.9529 15.6H21.1059H14.4706C14.5412 15.7412 14.5412 15.8823 14.6118 15.9529H19.4823C20.8941 15.9529 21.1059 16.5882 21.3176 18L21.8118 22.3059H22.3059L21.9529 15.6Z"
+              />
+              <path
+                d="M6.28235 23.3648C0.705882 22.4471 0.352941 17.4353 0.352941 16.5177H0V23.9295H0.352941V23.3648C0.352941 22.1648 0.988235 21.1765 1.97647 21.8118C2.96471 22.8706 4.30588 23.5765 6.28235 23.8589V23.3648Z"
+              />
+              <path
+                d="M10.3059 10.8706C2.61179 7.34118 3.24708 5.01177 3.24708 3.95294C3.24708 2.54118 4.23532 0.423529 7.97649 0.423529C11.7177 0.423529 14.5412 3.95294 14.5412 6.63529H14.8941V0.0705882H14.5412V2.75294C14.5412 3.67059 14.0471 3.67059 13.6236 3.10588C13.6236 3.03529 13.553 3.03529 13.553 2.96471C12.2118 1.2 10.0236 0 7.97649 0C1.97649 0 0.635318 3.52941 0.705906 6.14118C0.776495 9.17647 3.31767 11.5059 7.97649 13.4824C12.4941 15.3176 13.4118 17.6471 13.4824 19.0588C13.553 19.9765 13.9059 23.5765 8.04708 23.5765C7.83532 23.5765 7.69414 23.5059 7.55297 23.5059V23.9294C7.69414 23.9294 7.83532 23.9294 7.97649 23.9294C13.8353 23.9294 16.2353 20.9647 16.2353 18.2118C16.2353 16.2353 15.953 13.4118 10.3059 10.8706Z"
+              />
+              <path
+                d="M29.7176 40.6588C29.7176 45.7411 26.6117 50.1176 20.8235 50.1176C15.0353 50.1176 11.9294 45.8117 11.9294 40.7294C11.9294 35.647 14.9647 30.9176 20.8235 30.9176C26.6823 30.9176 29.7176 35.5764 29.7176 40.6588ZM27.1764 40.7294C27.1764 36.4941 25.5529 31.2705 20.8235 31.2705C16.0941 31.2705 14.4706 36.5647 14.4706 40.7294C14.4706 44.9647 16.0235 49.7647 20.8235 49.7647C25.6235 49.7647 27.1764 44.9647 27.1764 40.7294Z"
+              />
+            </svg>
+          </a>
+        </h1>
+        <nav>
+          <div class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="gnbWrap">
+            <ul class="gnb">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-------- main -------->
+      <main>
+        <div class="blackBox"></div>
+        <section class="maintitle">
+          <div class="maintitleimgwrap"></div>
+          <p>
+            Untitled는 무제라는 의미입니다. <br />저는 스스로를 한정짓는 것보다
+            무엇이든 제목을 붙이는대로 <br />변화할 가능성을 품고 있는 자로
+            정의하고 싶습니다!
+          </p>
+        </section>
+        <div class="scrolleffect"><span></span></div>
+        <section class="background">
+          <h3>YERIM</h3>
+          <h3>PORTFOLIO</h3>
+        </section>
+      </main>
+      <!-------- maincontentWrap -------->
+      <div class="mainContentWrap">
+        <!-------- About -------->
+        <section id="about">
+          <h3 class="section-title">About</h3>
+          <div class="about-section">
+            <div class="about-section-intro">
+              <figure>
+                <img src="./img/inner-img/profile.jpg" alt="profileImg" />
+                <h3>Designer & Publisher</h3>
+                <p>
+                  <i class="fas fa-location-dot"></i> Republic of Korea,
+                  Gyeonggi-do
+                </p>
+              </figure>
+              <article>
+                <h3>
+                  안녕하세요,<br /><em>도전을 통한 성장에 즐거움</em>을 느끼는
+                  서예림입니다.
+                </h3>
+                <div class="about-section-intro-descWrap">
+                  <p>
+                    사용자 경험을 기반으로 한 디자인 작업을 즐기며, 기초를
+                    탄탄히 다지고자 노력하고 있습니다.
+                  </p>
+                  <p>
+                    지속적인 학습을 통해 성장의 즐거움을 느끼며, 새로운 도전에
+                    대한 두려움을 극복하는 것을 즐깁니다. 주어진 일에 대한 강한
+                    책임감을 가지고 있어 정해진 기간 안에 업무를 완료하려
+                    노력하며, 동료들과 협업하여 함께 성취하는 것을 중요하게
+                    여깁니다.
+                  </p>
+                  <p>
+                    긍정적인 마인드로 어려움에 직면할 때마다 돌파구를 찾아내어,
+                    혼자가 아닌 동료들과 함께 어떻게든 문제를 해결하는 것에 큰
+                    활력을 얻고 있습니다.
+                  </p>
+                  <p>
+                    가장 쉬운 일이면서도 중요한, 기본에 충실한 탄탄한 웹구조를
+                    만들어가는 퍼블리셔가 되는게 목표입니다.
+                  </p>
+                </div>
+                <button>
+                  <a href="#">
+                    <i class="fab fa-github"></i>Git Hub 바로가기
+                    <i class="fas fa-arrow-right-long"></i>
+                  </a>
+                </button>
+              </article>
+            </div>
+            <div class="about-experience-wrap">
+              <h3 class="section-title">Experience</h3>
+              <div class="about-experience-contents">
+                <ul class="about-experience-work">
+                  <li>
+                    <em>2016.08</em>
+                    <p>오성씨앤디 사인디자인 인턴</p>
+                  </li>
+                  <li>
+                    <em>2018.02</em>
+                    <p>시각디자인학과 졸업</p>
+                  </li>
+                  <li>
+                    <em>2018.07-2021.10</em>
+                    <p>프린트라인 편집디자이너</p>
+                  </li>
+                  <li>
+                    <em>2021.10-2023.03</em>
+                    <p>좋은디자인 편집디자이너</p>
+                  </li>
+                  <li>
+                    <em>2024.05-2025.02</em>
+                    <p>한국잡월드 계약직강사</p>
+                  </li>
+                </ul>
+                <ul class="about-experience-license">
+                  <li>
+                    <em>2017.01</em>
+                    <p>GTQ그래픽기술자격 1급</p>
+                  </li>
+                  <li>
+                    <em>2023.08-2024.02</em>
+                    <p>UX/UI디자인&프론트엔드</p>
+                  </li>
+                  <li>
+                    <em>2024.12</em>
+                    <p>웹디자인개발기능사</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-------- Skills -------->
+        <section id="skills">
+          <h3 class="section-title">Skills</h3>
+          <ul class="skills-contents">
+            <li>
+              <div class="skills-icon-wrap">
+                <div class="skills-icon">
+                  <i>Ps</i>
+                </div>
+                <em>Photoshop</em>
+              </div>
+              <p>포토샵을 이용하여 이미지 효과, 합성 등 작업이 가능합니다.</p>
+            </li>
+            <li>
+              <div class="skills-icon-wrap">
+                <div class="skills-icon">
+                  <i>Ai</i>
+                </div>
+                <em>Illustrator</em>
+              </div>
+              <p>
+                일러스트를 활용하여 벡터 일러스트 편집, 로고, 명함 제작 등
+                작업이 가능합니다.
+              </p>
+            </li>
+            <li>
+              <div class="skills-icon-wrap">
+                <div class="skills-icon">
+                  <i>Id</i>
+                </div>
+                <em>Indesign</em>
+              </div>
+              <p>
+                인디자인을 활용하여 포스터, 보고서 제작 등 편집
+                작업이가능합니다.
+              </p>
+            </li>
+            <li>
+              <div class="skills-icon-wrap">
+                <div class="skills-icon">
+                  <i class="fab fa-figma"></i>
+                </div>
+                <em>Figma</em>
+              </div>
+              <p>
+                피그마를 활용하여 와이어프레임, 프로토타입 편집 등이 가능합니다.
+              </p>
+            </li>
+            <li>
+              <div class="skills-icon-wrap">
+                <div class="skills-icon">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <em>HTML5</em>
+              </div>
+              <p>
+                HTML을 활용하여 사용자편의성을 고려한 웹 구조 기획이 가능합니다.
+              </p>
+            </li>
+            <li>
+              <div class="skills-icon-wrap">
+                <div class="skills-icon">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <em>CSS&SCSS</em>
+              </div>
+              <p>
+                페이지의 스타일 정의, 애니메이션, 미디어쿼리 작업이 가능합니다.
+              </p>
+            </li>
+            <li>
+              <div class="skills-icon-wrap">
+                <div class="skills-icon">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <em>JavaScript</em>
+              </div>
+              <p>
+                JavaScript와 jQuery의 기초를 이해하고 있으며, 퍼블리싱에 필요한
+                기능을 분석하여 구현할 수 있습니다.
+              </p>
+            </li>
+            <li>
+              <div class="skills-icon-wrap">
+                <div class="skills-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <em>React</em>
+              </div>
+              <p>
+                라이브러리 언어로 어떻게 활용되는지, TypeScript 이론과 함께
+                익혔습니다.
+              </p>
+            </li>
+          </ul>
+        </section>
+        <!-------- Portfolio -------->
+        <section id="portfolio">
+          <h3 class="section-title">Portfolio</h3>
+          <div class="portfolio-section project">
+            <h3 class="portfolio-section-subtitle">Web Project</h3>
+            <div class="portfolio-project-container">
+              <ul class="portfolio-project-wrapper">
+                <li class="portfolio-project-slide">
+                  <div class="project-slide-img">
+                    <img
+                      src="./img/inner-img/museum.jpeg"
+                      alt="museumclonecodingimg"
+                    />
+                  </div>
+                  <div class="project-slide-text">
+                    <h4>국립중앙박물관</h4>
+                    <span>웹 퍼블리싱 반응형 [Web / Mobile]</span>
+                    <div class="project-slide-language">
+                      <h5>작업언어</h5>
+                      <p>#HTML #SCSS #Javascript</p>
+                    </div>
+                    <p>
+                      HTML, CSS, Javascript를 활용하여 국립중앙박물관 홈페이지를
+                      PC/ Mobile 버전으로 클론코딩하였습니다.
+                    </p>
+                    <button>
+                      <a href="./clonecoding/museum/index.html" target="_blank"
+                        >웹사이트 바로가기 <i class="fas fa-arrow-right"></i
+                      ></a>
+                    </button>
+                  </div>
+                </li>
+                <li class="portfolio-project-slide">
+                  <div class="project-slide-img">
+                    <img
+                      src="./img/inner-img/emart24.JPG"
+                      alt="emart24clonecodingimg"
+                    />
+                  </div>
+                  <div class="project-slide-text">
+                    <h4>Emart24</h4>
+                    <span>웹 퍼블리싱 반응형 [Web / Mobile]</span>
+                    <div class="project-slide-language">
+                      <h5>작업언어</h5>
+                      <p>#HTML #CSS #Javascript #Jquery</p>
+                    </div>
+                    <p>
+                      HTML, CSS, Jquery, Javascript를 활용하여 이마트 24
+                      홈페이지를 PC/ Mobile 버전으로 클론코딩하였습니다.
+                    </p>
+                    <button>
+                      <a
+                        href="./clonecoding/emart24/eMart24_clone-last-fail/index.html"
+                        target="_blank"
+                        >웹사이트 바로가기 <i class="fas fa-arrow-right"></i
+                      ></a>
+                    </button>
+                  </div>
+                </li>
+                <li class="portfolio-project-slide">
+                  <div class="project-slide-img">
+                    <img
+                      src="./img/inner-img/twosome-pc.png"
+                      alt="twosomeclonecodingimg"
+                    />
+                  </div>
+                  <div class="project-slide-text">
+                    <h4>TwosomePlace</h4>
+                    <span>웹 퍼블리싱 반응형 [Web / Mobile]</span>
+                    <div class="project-slide-language">
+                      <h5>작업언어</h5>
+                      <p>#HTML #CSS #SCSS #Javascript</p>
+                    </div>
+                    <p>
+                      CSS, SCSS, Javascript를 활용하여 투썸플레이스 홈페이지를
+                      PC/ Mobile 버전으로 클론코딩하며 메뉴를 클릭할 시
+                      json파일을 활용하여 각 영양정보를 함께 확인할 수 있는
+                      기능을 추가하였습니다.
+                    </p>
+                    <button>
+                      <a
+                        href="./clonecoding/twosome/public/index.html"
+                        target="_blank"
+                        >웹사이트 바로가기 <i class="fas fa-arrow-right"></i
+                      ></a>
+                    </button>
+                  </div>
+                </li>
+                <li class="portfolio-project-slide">
+                  <div class="project-slide-img">
+                    <img
+                      src="./img/inner-img/introduce-pc.jpeg"
+                      alt="introdecupageimg"
+                    />
+                  </div>
+                  <div class="project-slide-text">
+                    <h4>Introduce</h4>
+                    <span>웹 퍼블리싱 반응형 [Web / Mobile]</span>
+                    <div class="project-slide-language">
+                      <h5>작업언어</h5>
+                      <p>#HTML #CSS #Jquery</p>
+                    </div>
+                    <p>
+                      CSS, SCSS, Jquery를 활용하여 자기소개 홈페이지를 PC/
+                      Mobile 버전으로 제작하였습니다.
+                    </p>
+                    <button>
+                      <a
+                        href="./clonecoding/introduce/index.html"
+                        target="_blank"
+                        >웹사이트 바로가기 <i class="fas fa-arrow-right"></i
+                      ></a>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-project-paginationWrap">
+              <span class="material-symbols-outlined" id="prevBtn">
+                arrow_back_ios
+              </span>
+              <span class="material-symbols-outlined" id="nextBtn">
+                arrow_forward_ios
+              </span>
+            </div>
+          </div>
+          <div class="portfolio-section exercise">
+            <h3 class="portfolio-section-subtitle">Exercise</h3>
+            <ul class="portfolio-section-exerciseWrap">
+              <li>
+                <a
+                  href="./clonecoding/example/01/index.html"
+                  data-featherlight="iframe"
+                >
+                  <div class="exerciseImg">
+                    <img
+                      src="./img/inner-img/cardchange.png"
+                      alt="exerciseImg01"
+                    />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>카드 슬라이드</h4>
+                      <span>#HTML #CSS</span>
+                    </div>
+                    <p>
+                      css를 활용하여 마우스를 오버하면 숨겨진 카드가 보이는
+                      애니메이션을 연출했습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./clonecoding/example/02/index.html"
+                  data-featherlight="iframe"
+                >
+                  <div class="exerciseImg">
+                    <img
+                      src="./img/inner-img/mousehover2.jpeg"
+                      alt="exerciseImg02"
+                    />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>슬라이드 이미지</h4>
+                      <span>#HTML #CSS #Jquery</span>
+                    </div>
+                    <p>
+                      css와 Jquery를 활용하여 마우스를 올리면 쇼핑 옵션이
+                      나오고, 선택에 따라 클래스를 붙이거나 이미지가 바뀌는
+                      기능을 연출했습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./clonecoding/example/03/index.html"
+                  data-featherlight="iframe"
+                >
+                  <div class="exerciseImg">
+                    <img
+                      src="./img/inner-img/mousehover.jpeg"
+                      alt="exerciseImg03"
+                    />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>쇼핑몰 상품 예시</h4>
+                      <span>#HTML #CSS #Jquery</span>
+                    </div>
+                    <p>
+                      css와 Jquery를 활용하여 마우스를 올리면 쇼핑 옵션이
+                      나오고, 선택에 따라 클래스를 붙이거나 이미지가 바뀌는
+                      기능을 연출했습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./clonecoding/example/04/index.html"
+                  data-featherlight="iframe"
+                >
+                  <div class="exerciseImg">
+                    <img
+                      src="./img/inner-img/sitetab.png"
+                      alt="exerciseImg04"
+                    />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>탭 화면 구성 & 메뉴페이지</h4>
+                      <span>#HTML #CSS #Jquery </span>
+                    </div>
+                    <p>
+                      탭바 클릭에 따라 변하는 홈페이지와 상단 trigger를 이용하여
+                      메뉴화면을 구성했습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./clonecoding/example/05/index.html"
+                  data-featherlight="iframe"
+                >
+                  <div class="exerciseImg">
+                    <img
+                      src="./img/inner-img/tarotcard.png"
+                      alt="exerciseImg05"
+                    />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>타로카드회전</h4>
+                      <span>#HTML #CSS #Javascript</span>
+                    </div>
+                    <p>
+                      버튼을 누르면 회전하며 다른 카드가 나오고 클릭 시 카드가
+                      뒤집어지는 효과와 함께 설명이 보이는 효과를 연출했습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./clonecoding/createAccount/index.html"
+                  data-featherlight="iframe"
+                >
+                  <div class="exerciseImg">
+                    <img
+                      src="./img/inner-img/tmonjoin-pc.png"
+                      alt="exerciseImg06"
+                    />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>TMON 회원가입&로그인</h4>
+                      <span>#HTML #CSS #JAVASCRIPT</span>
+                    </div>
+                    <p>
+                      css와 Javascript를 활용하여 TMON 로그인 페이지의
+                      회원가입을 클릭하면 절차를 진행할 수 있는 창을 클론코딩
+                      했습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="portfolio-section design">
+            <h3 class="portfolio-section-subtitle">Design</h3>
+            <ul class="portfolio-section-exerciseWrap">
+              <li>
+                <a href="./img/Frame 2.png" data-featherlight="iframe">
+                  <div class="exerciseImg">
+                    <img src="./img/01.png" alt="desingimg01" />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>한국에너지공단 홈페이지 리디자인</h4>
+                      <span>#Figma</span>
+                    </div>
+                    <p>
+                      한국에너지공단 홈페이지를 Figma를 이용하여 리디자인 컨셉을
+                      잡아보았습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./img/inner-img/railway.png"
+                  data-featherlight="iframe"
+                >
+                  <div class="exerciseImg">
+                    <img
+                      src="./img/inner-img/railwaytitle.png"
+                      alt="desingimg02"
+                    />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>2023 신년교례회 웹초청장</h4>
+                      <span>#Illustrator #Indesign</span>
+                    </div>
+                    <p>
+                      한국철도학회에서 진행된 신년교례회 웹초청장을 디자인
+                      진행했습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./img/inner-img/poster.jpg" data-featherlight="iframe">
+                  <div class="exerciseImg">
+                    <img
+                      src="./img/inner-img/postertitle.png"
+                      alt="desingimg03"
+                    />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>드림위드앙상블 웹자보</h4>
+                      <span>#Illustrator #Indesign</span>
+                    </div>
+                    <p>
+                      드림위드앙상블 홍보 웹자보 컨텐츠를 디자인 진행했습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./img/inner-img/cardnews.png"
+                  data-featherlight="iframe"
+                >
+                  <div class="exerciseImg">
+                    <img
+                      src="./img/inner-img/cardtitle.png"
+                      alt="desingimg04"
+                    />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>경기미래교육파주캠퍼스 카드뉴스</h4>
+                      <span>#Illustrator #Indesign</span>
+                    </div>
+                    <p>
+                      경기미래교육파주캠퍼스에서 진행하는 영어뮤지컬의 SNS
+                      홍보용 카드뉴스를 제작하였습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./img/inner-img/lea.png" data-featherlight="iframe">
+                  <div class="exerciseImg">
+                    <img src="./img/inner-img/leatitle.png" alt="desingimg05" />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>한국에너지공단 일가정양립 리플렛</h4>
+                      <span>#Illustrator #Indesign</span>
+                    </div>
+                    <p>
+                      한국에너지공단에서 제작된 일가정 양립 리플렛을
+                      디자인하였습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./img/inner-img/brochure.png"
+                  data-featherlight="iframe"
+                >
+                  <div class="exerciseImg">
+                    <img
+                      src="./img/inner-img/brochuretitle.png"
+                      alt="desingimg06"
+                    />
+                  </div>
+                  <div class="exerciseText">
+                    <div class="exerciseText-title">
+                      <h4>반도체소재응용과 학위과정 브로셔</h4>
+                      <span>#Illustrator #Indesign #Photoshop</span>
+                    </div>
+                    <p>
+                      한국폴리텍대학의 학위과정 안내 브로셔를 디자인하였습니다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-------- Contact -------->
+        <section id="contact">
+          <h3 class="section-title">Contact</h3>
+          <div class="contact-section">
+            <p>
+              누구든지 한눈에 알아보기 쉬운, 웹 접근성과 디자인 둘 다 놓치지
+              않는 퍼블리셔가 되고 싶습니다.
+            </p>
+            <h4>akb_03@naver.com</h4>
+            <article>
+              <span>제 포트폴리오를 끝까지 봐주셔서 감사합니다!😁</span>
+              두려워하지 않고 항상 배움의 즐거움을 안고 성장하는 디블리셔가
+              되도록 하겠습니다. <br />궁금한 내용이 있다면 언제든지 연락
+              부탁드립니다!
+            </article>
+            <button>
+              <a href="mailto:akb_03@naver.com" target="_blank">이메일 보내기</a
+              ><i class="fas fa-angle-right"></i>
+            </button>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <h4>
+          본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
+        </h4>
+        <p>© 2024 SeoYeRim.</p>
+      </footer>
+    </div>
+  </body>
+</html>

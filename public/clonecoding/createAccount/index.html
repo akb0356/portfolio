@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/71fdac82e6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom  -->
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1 class="logo">
+          <a href="#">TMON</a>
+        </h1>
+      </header>
+      <section class="termsOfservice">
+        <h2 class="termsTitle">이용약관 동의</h2>
+        <form class="inputLists" method="post">
+          <ul class="visual-inputList">
+            <li class="check-All">
+              <label for="checkbox" class="checkbox" id="allcheck">
+                <input id="allcheck" type="checkbox" />
+                <i class="visualCheckbox"><i class="fa-solid fa-check"></i></i>
+                모두 확인, 동의합니다.
+              </label>
+            </li>
+            <li>
+              <label for="checkbox" class="checkbox" id="ageAgree">
+                <input id="ageAgree" type="checkbox" />
+                <i class="visualCheckbox"><i class="fa-solid fa-check"></i></i>
+                만 14세 이상입니다.
+                <span class="orangeSpan">(필수)</span>
+              </label>
+            </li>
+            <li>
+              <label for="checkbox" class="checkbox" id="ruleAgree">
+                <input id="ruleAgree" type="checkbox" />
+                <i class="visualCheckbox"><i class="fa-solid fa-check"></i></i>
+                이용약관 동의
+                <span class="orangeSpan">(필수)</span>
+              </label>
+              <button class="viewCont"><a href="#">내용보기</a></button>
+            </li>
+            <li class="bold">
+              <label for="checkbox" class="checkbox" id="infoAgree">
+                <input id="infoAgree" type="checkbox" />
+                <i class="visualCheckbox"><i class="fa-solid fa-check"></i></i>
+                개인정보 수집 및 이용동의
+                <span class="orangeSpan">(필수)</span>
+              </label>
+              <button class="viewCont"><a href="#">내용보기</a></button>
+            </li>
+            <li>
+              <label for="checkbox" class="checkbox" id="infoAgreeselect">
+                <input id="infoAgreeselect" type="checkbox" />
+                <i class="visualCheckbox"><i class="fa-solid fa-check"></i></i>
+                개인정보 수집 및 이용동의 (선택)
+              </label>
+              <button class="viewCont"><a href="#">내용보기</a></button>
+            </li>
+            <li>
+              <label for="checkbox" class="checkbox" id="emailAgree">
+                <input id="emailAgree" type="checkbox" />
+                <i class="visualCheckbox"><i class="fa-solid fa-check"></i></i>
+                이메일 마케팅 수신 동의
+              </label>
+            </li>
+          </ul>
+        </form>
+        <div class="nextButton">
+          <button class="agreeNextButton">
+            <a href="javascript:void(0)">동의하고 가입하기</a>
+          </button>
+        </div>
+      </section>
+      <footer>
+        <p class="copyright">COPYRIGHT. TMON INC. ALL RIGHTS RESERVED.</p>
+      </footer>
+    </div>
+  </body>
+</html>

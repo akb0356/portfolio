@@ -1,0 +1,292 @@
+/* reset css */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+html,
+body {
+  font-size: 10px;
+}
+
+:root {
+  --orange-color: #f27935;
+}
+
+/* css */
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/* login-wrap */
+.login-wrap {
+  border: 1px solid #f2f4f5;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 50px 51px;
+  margin: 0 auto;
+  z-index: 2;
+}
+.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login h1 {
+  text-align: center;
+}
+.login h1 a {
+  display: inline-block;
+  width: 14rem;
+  height: 3.6rem;
+  background: url("https://img4.tmon.kr/fe/release/service/static/markup/pc/im/membership/sp-membership.png?v=20231121080105")
+    no-repeat;
+  background-position: 0 0;
+  font-size: 0;
+}
+.login > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+.login form.login-input-list label {
+  width: 100%;
+  position: relative;
+}
+.login form.login-input-list label input {
+  width: 100%;
+  padding: 1.5rem 1.9rem;
+  border: 1px solid #d7d7d7;
+}
+.login form.login-input-list label i.fa-xmark {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #aaa;
+}
+.login form.login-input-list label input::placeholder {
+  font: 600 1.5rem "Noto Sans KR";
+}
+.login form.login-input-list label input:focus::placeholder {
+  color: transparent;
+}
+.login form.login-input-list label input:focus {
+  outline: none;
+  border-color: var(--orange-color);
+  color: var(--orange-color);
+  font: 600 1.5rem "Noto Sans KR";
+}
+
+.orangeSpan {
+  display: none;
+  margin-top: 1rem;
+  font: 400 1.3rem "Noto Sans KR";
+  color: red;
+  text-indent: 0.3rem;
+}
+.nextButton {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.agreeNextButton {
+  width: 100%;
+  height: 6.4rem;
+  border: none;
+  background: var(--orange-color);
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.agreeNextButton a {
+  font: 700 1.9rem "Noto Sans KR";
+  color: white;
+}
+.login form.login-check {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.login form.login-check label {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font: 1.4rem "Noto Sans KR";
+}
+.login form.login-check .alerttxt {
+  border: 1.8px solid #ababab;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  padding: 1rem 2rem;
+  font: 400 1rem "Noto Sans KR";
+  text-align: center;
+  color: #46474d;
+  display: none;
+}
+.login form.login-check .alerttxt::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -0.7rem;
+  left: 2rem;
+  width: 1.3rem;
+  height: 0.7rem;
+  background-color: black;
+  background: url(http://img1.tmon.kr/static/img/sp_pop.png?v=201603&v=1486361930&v=1658968077&v=1681269485)
+    no-repeat -35.5rem -4.4rem;
+}
+.login form.login-check .alerttxt em {
+  font-style: normal;
+  color: red;
+  font-weight: 500;
+}
+.login form.login-check label input {
+  position: absolute;
+  top: 5rem;
+}
+.login form.login-check label i.visualCheckbox {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #d7d7d7;
+}
+.login form label i.visualCheckbox i.fa-check {
+  color: var(--orange-color);
+  display: none;
+}
+.login form label i.visualCheckbox.check {
+  border-color: var(--orange-color);
+}
+.login form label i.visualCheckbox.check i.fa-check {
+  color: var(--orange-color);
+  display: block;
+}
+.comfort-login {
+  width: 100%;
+  margin: 5rem 0;
+  text-align: center;
+}
+.comfort-login h4 {
+  font: 400 1.2rem "Noto Sans KR";
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  margin-bottom: 2rem;
+}
+.comfort-login h4::before,
+.comfort-login h4::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #f2f4f5;
+  flex: 1;
+}
+.comfort-login ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.comfort-login ul li a {
+  display: inline-block;
+  text-indent: -9999px;
+  width: 3.6rem;
+  height: 3.6rem;
+  background: url(https://img1.tmon.kr/cdn4/pc/sp_ico_sns.png) no-repeat;
+}
+.comfort-login ul li:nth-child(2) a {
+  background-position: -3.8rem 0;
+}
+.comfort-login ul li:nth-child(3) a {
+  background-position: -7.6rem 0;
+}
+.comfort-login ul li:nth-child(4) a {
+  background-position: -11.4rem 0;
+}
+.comfort-login ul li:nth-child(5) a {
+  background-position: -15.2rem 0;
+}
+.logininfo {
+  width: 100%;
+  margin-top: 10rem;
+  position: relative;
+}
+.logininfo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #f2f4f5;
+}
+.logininfo ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.logininfo ul li:nth-child(1)::after,
+.logininfo ul li:nth-child(2)::after {
+  content: "";
+  display: inline-block;
+  width: 0.1rem;
+  height: 1rem;
+  background-color: #f2f4f5;
+  margin: 0 2rem;
+}
+.logininfo ul li:nth-child(3):hover a {
+  color: var(--orange-color);
+  font-weight: bold;
+}
+.logininfo ul li a {
+  color: #333;
+  font-size: 1.3rem;
+  transition: all 0.3s;
+}
+.login-banner {
+  position: absolute;
+  width: 100%;
+  height: 80rem;
+}
+.login-banner a {
+  display: inline-block;
+  background: url(http://img1.tmon.kr/cdn4/deals/banner/banner6_e149c.png?1290x480)
+    no-repeat bottom;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}

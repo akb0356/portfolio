@@ -1,0 +1,1062 @@
+@import url(./reset.css);
+
+/*------------ common ------------*/
+
+.wrap {
+  /* min-width: 134rem; */
+  width: 100%;
+  height: 100%;
+}
+.mainContentWrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+section:not(main > section) {
+  width: 100%;
+  padding: 0 15rem 2rem 15rem;
+  padding-top: 20rem;
+}
+
+.section-title {
+  margin: 3rem 0;
+  font: 5.5rem "Welland";
+}
+
+/*------------ header ------------*/
+#mobileHeader {
+  display: none;
+}
+header {
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  padding: 0rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  transition: border-color 0.5s;
+  border-bottom: 1px solid transparent;
+}
+header h1 {
+  width: 3.5rem;
+  height: 5rem;
+}
+header h1 a svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  fill: white;
+  transition: all 0.5s;
+}
+header nav ul li {
+  float: left;
+  margin-right: 4rem;
+}
+header nav ul li:last-child {
+  margin-right: 0;
+}
+header nav ul li a {
+  font: 500 1.8rem "Noto Sans KR";
+  color: white;
+  transition: color 0.5s;
+}
+header nav ul li a:hover,
+header.fixed nav ul li a:hover {
+  color: var(--sub-color);
+}
+header.fixed {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid black;
+}
+header.fixed h1 a svg {
+  fill: var(--main-color);
+}
+header.fixed nav ul li a {
+  color: var(--main-color);
+}
+
+/*------------ main ------------*/
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .maintitle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main .maintitle .maintitleimgwrap {
+  background: url(./img/maintitle.png) center/contain no-repeat;
+  width: 100rem;
+  height: 20rem;
+}
+main .maintitle p {
+  width: 50%;
+  color: white;
+  font: 300 2.2rem/2 "Noto Sans KR";
+  text-align: center;
+}
+main .maintitle p::before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 1px;
+  height: 5rem;
+  background: white;
+}
+main .scrolleffect {
+  position: absolute;
+  bottom: 5rem;
+  width: 2.5rem;
+  height: 5rem;
+  display: inline-block;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+main .scrolleffect span {
+  position: absolute;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border-radius: 50%;
+  animation: move 2s ease-in infinite;
+}
+@keyframes move {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 70%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+main .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: -50;
+}
+main .background::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url(./img/002.jpg) no-repeat center center/cover;
+  mix-blend-mode: overlay; /* Multiply 효과 적용 */
+  opacity: 0.4;
+}
+main .background h3 {
+  position: absolute;
+  font: 34.8rem "YesevaOne";
+  color: var(--main-color);
+  text-shadow: 0px 2px 5px rgba(238, 238, 238, 0.15);
+  letter-spacing: 10.44px;
+  font-style: italic;
+  transform: skewY(-15deg) rotate(15deg);
+}
+main .background h3:first-child {
+  top: 10%;
+  left: -5%;
+}
+main .background h3:last-child {
+  right: -50%;
+  bottom: 10%;
+}
+main .blackBox {
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+}
+
+/*------------ about ------------*/
+#about {
+  width: 100%;
+  height: 100%;
+}
+.about-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.about-section-intro {
+  width: 100%;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+.about-section-intro > figure {
+  width: 35%;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+.about-section-intro > figure > img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: filter 0.5s;
+}
+.about-section-intro > figure > img:hover {
+  filter: grayscale(0);
+}
+.about-section-intro > figure > h3 {
+  font: 400 2.5rem "Noto Sans";
+  letter-spacing: -0.1rem;
+  margin-bottom: 0.7rem;
+}
+.about-section-intro > figure > p {
+  font: 300 1.8rem "Noto Sans";
+  color: #d9d9d9;
+}
+.about-section-intro > figure > p > i {
+  color: inherit;
+  font-size: 1.5rem;
+}
+.about-section-intro > article {
+  width: 60%;
+  height: 100%;
+}
+.about-section-intro > article > h3 {
+  font: 500 3.5rem "Noto Sans KR";
+  margin-bottom: 2rem;
+}
+.about-section-intro > article > h3 > em {
+  font-style: normal;
+  font: 800 3.5rem "Noto Sans KR";
+  color: var(--sub-color);
+  text-decoration: underline wavy rgba(0, 0, 0, 0.3) 1px;
+  text-underline-offset: 0.6rem;
+}
+.about-section-intro > article > .about-section-intro-descWrap {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.about-section-intro > article > .about-section-intro-descWrap > p {
+  font: 400 1.8rem/1.8 "Noto Sans KR";
+  margin-bottom: 2.5rem;
+}
+.about-section-intro > article > button {
+  width: 40%;
+  padding: 1.3rem;
+  border: 1px solid var(--main-color);
+  background: none;
+  border-radius: 3rem;
+  transition: all 0.5s;
+}
+.about-section-intro > article > button:hover {
+  background: var(--main-color);
+}
+.about-section-intro > article > button > a {
+  font: 400 1.8rem "Noto Sans KR";
+}
+.about-section-intro > article > button:hover > a,
+.about-section-intro > article > button:hover > a > i {
+  color: white;
+}
+.about-section-intro > article > button > a > i {
+  font-size: 1.8rem;
+  margin-right: 1.5rem;
+}
+.about-section-intro > article > button > a > i:last-child {
+  margin-right: 0;
+}
+.about-section-eduExper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.about-section-eduExper-title {
+  font: 3.5rem "Welland";
+  margin-bottom: 2rem;
+}
+
+.about-section-education > .about-section-education-desc {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 7rem 1fr;
+  gap: 1.5rem;
+}
+.about-section-experience > .about-section-experience-desc {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 7rem 1fr 7rem 1fr;
+  gap: 1.5rem;
+}
+.about-section-education > .about-section-education-desc > h2,
+.about-section-experience > .about-section-experience-desc > h2 {
+  position: relative;
+  font: 1.5rem/1.5 "Welland";
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: var(--main-color);
+  border-radius: 3rem;
+  color: white;
+}
+.about-section-education > .about-section-education-desc > h2 > i,
+.about-section-experience > .about-section-experience-desc > h2 > i {
+  position: absolute;
+  right: -30%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-block;
+  background: var(--main-color);
+  border-radius: 3rem;
+}
+.about-section-education > .about-section-education-desc > h2::after,
+.about-section-experience > .about-section-experience-desc > h2::after {
+  content: "";
+  position: absolute;
+  right: -30%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 40%;
+  border: 1px dashed var(--main-color);
+}
+.about-section-education > .about-section-education-desc > p,
+.about-section-experience > .about-section-experience-desc > p {
+  font: 400 1.8rem "Noto Sans KR";
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+.about-experience-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.about-experience-work,
+.about-experience-license {
+  display: flex;
+  gap: 3rem;
+}
+.about-experience-work li,
+.about-experience-license li {
+  position: relative;
+  width: calc(100% / 5);
+}
+.about-experience-work li::after,
+.about-experience-license li::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  top: 25%;
+  left: 10%;
+  z-index: -10;
+}
+.about-experience-work li:last-child::after,
+.about-experience-license li:nth-child(3)::after,
+.about-experience-license li:nth-child(4)::after,
+.about-experience-license li:nth-child(5)::after {
+  display: none;
+}
+.about-experience-work li em,
+.about-experience-license li em {
+  background-color: white;
+  padding: 0 1.5rem;
+  width: 100%;
+  font: 600 2.3rem "Noto Sans";
+}
+.about-experience-work li:first-child em,
+.about-experience-license li:first-child em {
+  padding-left: 0;
+}
+.about-experience-work li p,
+.about-experience-license li p {
+  font: 500 1.5rem "NotoSansKR";
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+.about-experience-work li:first-child p,
+.about-experience-license li:first-child p {
+  margin-left: 0;
+}
+
+/*------------ Skills ------------*/
+#skills {
+  width: 100%;
+  height: 100%;
+}
+.skills-contents {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  gap: 2rem;
+}
+.skills-contents li {
+  border: 1px solid var(--main-color);
+  width: 100%;
+  height: 100%;
+  min-height: 26rem;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.skills-contents li p {
+  font: 500 1.3rem "NotoSansKr";
+}
+.skills-icon-wrap {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.skills-icon {
+  position: relative;
+  display: inline-block;
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--middlegrey-color);
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+.skills-contents li .skills-icon-wrap .skills-icon i {
+  font: 700 4.5rem "FontAwesome";
+  color: white;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+.skills-contents li:nth-child(1) .skills-icon-wrap .skills-icon i,
+.skills-contents li:nth-child(2) .skills-icon-wrap .skills-icon i,
+.skills-contents li:nth-child(3) .skills-icon-wrap .skills-icon i {
+  font: 700 3.5rem "NotoSans";
+}
+.skills-icon::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  background-color: var(--main-color);
+  transition: height 0.3s;
+}
+.skills-contents li:hover .skills-icon::before {
+  height: 100%;
+}
+.skills-contents li:hover .skills-icon-wrap .skills-icon i {
+  transform: rotateY(360deg);
+}
+.skills-contents li:hover em {
+  color: var(--sub-color);
+}
+.skills-icon-wrap em {
+  font: 600 2rem "NotoSans";
+  color: var(--main-color);
+  transition: color 0.3s;
+}
+
+/*------------ portfolio ------------*/
+#portfolio {
+  width: 100%;
+  height: 100%;
+}
+.portfolio-section-subtitle {
+  text-align: right;
+  font: 400 2rem "Noto Sans";
+  color: var(--middlegrey-color);
+  margin-bottom: 1.5rem;
+}
+.project {
+  position: relative;
+}
+.portfolio-project-container {
+  position: relative;
+  padding: 5rem 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.portfolio-project-paginationWrap span {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-55%);
+  cursor: pointer;
+}
+.portfolio-project-paginationWrap span:first-child {
+  left: 0;
+}
+.portfolio-project-paginationWrap span:last-child {
+  right: 0;
+}
+.portfolio-project-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.portfolio-project-slide {
+  padding: 0 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  flex: 0 0 100%;
+}
+.project-slide-text {
+  width: 30%;
+}
+.project-slide-img {
+  position: relative;
+  width: calc(100% / 2 - 3rem);
+  height: 35rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+.project-slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: object-position 6s;
+}
+.project-slide-img:hover img {
+  object-position: bottom;
+}
+.project-slide-img img {
+  width: 100%;
+}
+.project-slide-text h4 {
+  font: 600 3rem "NotoSansKR";
+}
+.project-slide-text span {
+  color: var(--middlegrey-color);
+  font: 400 1.8rem "NotoSansKR";
+}
+.project-slide-text p {
+  font: 400 1.5rem "NotoSansKR";
+}
+.project-slide-text button {
+  border: 1px solid var(--main-color);
+  background: white;
+  padding: 1rem 4rem;
+  border-radius: 20rem;
+  margin-top: 2rem;
+  transition: background 0.3s;
+}
+.project-slide-text button a {
+  font: 400 1.5rem "NotoSansKR";
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.project-slide-text button a i {
+  font-size: 1.5rem;
+}
+.project-slide-text button:hover {
+  background: var(--main-color);
+}
+.project-slide-text button:hover a,
+.project-slide-text button:hover a i {
+  color: white;
+}
+.project-slide-language {
+  margin: 2rem 0;
+}
+.project-slide-language h5 {
+  font: 500 1.5rem "NotoSansKR";
+}
+.project-slide-language p {
+  font: 300 1.5rem "Nanum Myeongjo";
+  color: var(--middlegrey-color);
+}
+.project,
+.exercise {
+  margin-bottom: 15rem;
+}
+.portfolio-section-exerciseWrap,
+.portfolio-section-designWrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+.portfolio-section-exerciseWrap li {
+  height: 40rem;
+  cursor: pointer;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+.portfolio-section-exerciseWrap li:hover .exerciseText-title h4 {
+  color: var(--sub-color);
+}
+.exerciseImg {
+  width: 100%;
+  height: 60%;
+  background-color: gray;
+}
+.exerciseImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.exerciseText {
+  height: 40%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.exerciseText-title {
+  margin-bottom: 1.5rem;
+}
+.exerciseText-title h4 {
+  font: 600 2rem "NotoSansKR";
+  transition: color 0.3s;
+}
+.exerciseText-title span {
+  font: 500 1.3rem "Nanum Myeongjo";
+  color: var(--middlegrey-color);
+}
+.exerciseText p {
+  font: 500 1.5rem "NotoSansKR";
+}
+.featherlight-content {
+  width: 90%;
+  height: 90vh;
+  overflow: auto;
+}
+.featherlight .featherlight-inner {
+  width: 100% !important;
+  height: 100%;
+}
+.featherlight iframe {
+  border: none;
+  width: 100% !important;
+  height: 100%;
+}
+.featherlight .featherlight-close-icon {
+  top: 87%;
+  right: 2rem;
+  background: var(--main-color);
+  color: white;
+  width: 6rem;
+  height: 6rem;
+  font: 500 2rem "NotoSans";
+  transition: all 0.3s;
+  border-radius: 50%;
+  line-height: 1;
+}
+.featherlight .featherlight-close-icon:hover {
+  background: var(--sub-color);
+}
+
+/*------------ contact ------------*/
+#contact > .section-title {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.contact-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact-section p {
+  font: 500 2rem "Noto Sans KR";
+}
+.contact-section h4 {
+  position: relative;
+  font: 700 8rem "Noto Sans KR";
+  margin: 4rem 5rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-bottom: 6rem;
+}
+.contact-section h4::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background: var(--main-color);
+  transform: scale(0);
+  transition: all 0.3s;
+}
+.contact-section h4:hover::after {
+  transform: scale(1);
+}
+.contact-section article {
+  font: 500 3rem/1.5 "Noto Sans KR";
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact-section article span {
+  display: block;
+  text-align: center;
+  font: 400 2rem "Noto Sans KR";
+  color: darkgray;
+}
+.contact-section button {
+  border: 1px solid var(--main-color);
+  border-radius: 5rem;
+  background: none;
+  padding: 2rem 1rem;
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transition: all 0.3s;
+}
+.contact-section button a {
+  font: 500 2rem "Noto Sans KR";
+}
+.contact-section button i {
+  font-size: 2rem;
+}
+.contact-section button:hover {
+  background: var(--main-color);
+}
+.contact-section button:hover a,
+.contact-section button:hover i {
+  color: white;
+}
+
+/* footer */
+footer {
+  margin-top: 15rem;
+  width: 100%;
+  background: var(--main-color);
+  padding: 5rem;
+  text-align: center;
+}
+footer h4 {
+  color: lightgray;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+  font: 400 1.7rem "Noto Sans KR";
+}
+footer p {
+  color: white;
+  font: 400 1.7rem "Noto Sans KR";
+}
+
+/* --------------mobile------------- */
+@media all and (max-width: 1300px) {
+  /* // ----- common ----- // */
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font: normal 9px "Noto Sans KR", sans-serif;
+  }
+
+  header h1 {
+    height: 60%;
+  }
+  header h1 a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  .about-section-intro {
+    flex-direction: column;
+  }
+  .about-section-intro figure {
+    width: 70%;
+  }
+  .about-section-intro article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-section-intro article > button {
+    margin: 0 auto;
+  }
+}
+@media all and (max-width: 900px) {
+  section:not(main > section) {
+    padding: 0 10rem;
+    padding-top: 20rem;
+  }
+
+  /* header */
+  #pcHeader {
+    display: none;
+  }
+  #mobileHeader {
+    display: flex;
+    padding: 0 4rem;
+  }
+  #mobileHeader.fixed nav .trigger span {
+    background-color: var(--main-color);
+  }
+  .trigger {
+    position: relative;
+    width: 3rem;
+    height: 2rem;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  .trigger span {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transition: all 0.3s;
+  }
+  .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  .trigger.active span {
+    background-color: white !important;
+  }
+  .gnbWrap {
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    right: -90rem;
+    background-color: var(--main-color);
+    transition: all 0.3s linear;
+  }
+  .gnbWrap.menuActive {
+    right: 0;
+  }
+  .gnbWrap .gnb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15rem 7rem 0;
+    gap: 2rem;
+  }
+  .gnbWrap .gnb li a {
+    color: white;
+  }
+
+  /* main */
+  main .maintitle .maintitleimgwrap {
+    width: 70rem;
+  }
+  main .maintitle p {
+    width: 100%;
+  }
+
+  /* about */
+  .about-section {
+    gap: 8rem;
+  }
+  .about-experience-contents ul {
+    flex-direction: column;
+  }
+  .about-experience-contents ul:last-child {
+    margin-top: 5rem;
+  }
+  .about-experience-contents ul li {
+    border-top: 1px solid var(--main-color);
+    display: flex;
+    width: 100%;
+  }
+  .about-experience-contents ul li:first-child {
+    border-top: 3px solid var(--main-color);
+  }
+  .about-experience-contents ul li em {
+    padding: 0;
+  }
+  .about-experience-contents ul li p {
+    width: 100%;
+    margin-left: 0;
+    font-size: 1.8rem;
+  }
+  .about-experience-work li::after,
+  .about-experience-license li::after {
+    display: none;
+  }
+  .skills-icon {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+  }
+  .skills-contents {
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .skills-contents li {
+    padding: 2rem;
+  }
+  .skills-contents li p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* portfolio */
+  .portfolio-project-slide {
+    flex-direction: column;
+    padding: 0 3rem;
+  }
+  .project-slide-img {
+    width: 80%;
+  }
+  .project-slide-text {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-slide-text p {
+    font-size: 1.8rem;
+  }
+  .project-slide-text button {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .project-slide-text button a {
+    font-size: 1.8rem;
+  }
+  .portfolio-section-exerciseWrap,
+  .portfolio-section-designWrap {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .exerciseImg {
+    height: 55%;
+  }
+  .exerciseText {
+    height: 45%;
+  }
+  .exerciseText {
+    padding: 4rem 2rem;
+  }
+  .exerciseText p {
+    font-size: 1.8rem;
+  }
+
+  /* footer */
+  .contact-section h4 {
+    font-size: 7rem;
+  }
+  .contact-section article {
+    font-size: 2.5rem;
+  }
+}
+@media all and (max-width: 650px) {
+  /* // ----- common ----- // */
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font: normal 8px "Noto Sans KR", sans-serif;
+  }
+  section:not(main > section) {
+    padding: 0 5rem;
+    padding-top: 10rem;
+  }
+  #mobileHeader h1 {
+    width: 4rem;
+    height: 70%;
+  }
+  main .maintitle .maintitleimgwrap {
+    width: 45rem;
+  }
+  main .maintitle p {
+    font-size: 2rem;
+  }
+  .about-section-intro figure {
+    display: none;
+  }
+  .about-section-intro article h3 {
+    font-size: 2.5rem;
+  }
+  .about-section-intro > article > button {
+    width: 80%;
+  }
+  .about-experience-contents ul li em {
+    font-size: 2rem;
+  }
+  .skills-contents li {
+    min-height: 23rem;
+  }
+  .skills-contents li p {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .portfolio-section-exerciseWrap,
+  .portfolio-section-designWrap {
+    grid-template: repeat(6, 1fr) / repeat(1, 1fr);
+  }
+  .exerciseImg {
+    height: 55%;
+  }
+  .exerciseText {
+    height: 45%;
+  }
+  .contact-section h4 {
+    font-size: 5rem;
+  }
+  .contact-section article {
+    font-size: 2rem;
+  }
+  .featherlight .featherlight-inner {
+    width: 100%;
+  }
+}

@@ -1,0 +1,1734 @@
+@import url(./reset.css);
+
+$color: (
+  pointpurple: #3f0b9f,
+  mainblack: #222,
+  lightblack: #444,
+  pointyellow: #fac906,
+  gray: #7c7c7c,
+);
+$font: (
+  maintitle: 4.6rem,
+  subtitle: 3rem,
+  desc: 1.8rem,
+  span: 1.6rem,
+);
+html {
+  color: map-get($color, mainblack);
+}
+#container {
+  max-width: 144rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.maincontentWrap {
+  width: 100%;
+  margin-top: 3.5rem;
+}
+section {
+  margin: 7rem 0;
+}
+.total-title {
+  margin-bottom: 3rem;
+  a {
+    font: 700 map-get($font, maintitle) "Noto Sans KR";
+  }
+}
+
+// ----- header ----- //
+.pcHeader {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  .navinfo {
+    position: relative;
+    z-index: 500;
+    width: 100%;
+    margin-top: 1rem;
+    .utill {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      li {
+        position: relative;
+        height: 4rem;
+        font: 400 1.4rem "Noto Sans KR";
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline-block;
+          width: 100%;
+          height: 0.3rem;
+          background: #222;
+        }
+        a {
+          padding: 1rem 1.5rem;
+          width: 100%;
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          justify-content: center;
+          font: 400 1.4rem "Noto Sans KR";
+          color: map-get($color, lightblack);
+        }
+      }
+      .museumLinkWrap,
+      .languageWrap {
+        width: inherit;
+        margin-right: 2rem;
+        cursor: pointer;
+        i {
+          font-size: 1.5rem;
+        }
+        &.clickon {
+          a {
+            background: map-get($color, mainblack);
+            color: white;
+            i {
+              transform: rotate(180deg);
+            }
+          }
+        }
+        .museumLink,
+        .language {
+          display: none;
+          background: map-get($color, mainblack);
+          border-top: 1px solid map-get($color, gray);
+          li {
+            a {
+              color: white;
+              transition: color 0.3s;
+              &:hover {
+                color: map-get($color, pointyellow);
+                text-decoration-line: underline;
+              }
+            }
+          }
+        }
+      }
+      .snsList {
+        display: flex;
+        height: 100%;
+        padding: 0 1rem;
+        li > a > i {
+          font-size: map-get($font, span);
+        }
+      }
+    }
+  }
+  nav {
+    z-index: 1;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      width: 21rem;
+      height: 5.5rem;
+      background: url(https://www.museum.go.kr/ux/content/images/common/header_logo.png)
+        center center/cover no-repeat;
+    }
+    .gnbWrap {
+      li {
+        float: left;
+        margin-right: 3.5rem;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          position: relative;
+          font: 500 2.2rem "Noto Sans KR";
+          transition: all 0.3s;
+          &:hover {
+            color: map-get($color, pointpurple);
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: -0.5rem;
+              width: 100%;
+              height: 0.5rem;
+              background: map-get($color, pointpurple);
+            }
+          }
+        }
+        & > .sub-menu {
+          display: none;
+          position: absolute;
+          top: 14rem;
+          left: 0;
+          width: 100%;
+          background: map-get($color, mainblack);
+          & > ul {
+            padding-left: 27rem;
+            width: 100%;
+            display: flex;
+            li {
+              position: relative;
+              padding: 1.5rem 0;
+              margin-right: 2rem;
+              cursor: pointer;
+              &:hover > a {
+                color: map-get($color, pointyellow);
+                &::before {
+                  content: "";
+                  position: absolute;
+                  bottom: -1rem;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 2rem;
+                  height: 0.5rem;
+                  background: map-get($color, pointyellow);
+                }
+              }
+              a {
+                font: 300 1.5rem "Noto Sans KR";
+                color: white;
+                transition: all 0.3s;
+              }
+            }
+          }
+        }
+      }
+    }
+    .join {
+      display: flex;
+      li {
+        margin-right: 1rem;
+        cursor: pointer;
+        a {
+          color: map-get($color, lightblack);
+          font: 500 1.5rem "Noto Sans KR";
+        }
+      }
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        i {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+// ----- mobheader ----- //
+.mobileHeader {
+  display: none;
+}
+
+// ----- searchArea ----- //
+.searchArea {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 87rem;
+  background: url("https://www.museum.go.kr/ux/content/images/common/bg/bg_search.png")
+    no-repeat center;
+  background-size: cover;
+  z-index: 1000;
+  .searchNav {
+    display: flex;
+    max-width: 144rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+    .search-close {
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      background: url("https://www.museum.go.kr/ux/content/images/common/btn/btn_white_close.png")
+        no-repeat center;
+      background-size: cover;
+      text-indent: -9999999px;
+    }
+  }
+  form {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input {
+      border: none;
+      outline: none;
+      width: 50%;
+      height: 7rem;
+      padding: 1rem 3rem;
+      font: 2rem "NotoSansKR";
+      color: map-get($color, mainblack);
+    }
+    & > button {
+      border: none;
+      background-color: map-get($color, pointpurple);
+      height: 7rem;
+      padding: 1rem 3rem;
+      color: white;
+      font: 500 2rem "NotoSansKR";
+    }
+  }
+}
+
+// ----- main ----- //
+.mainSlide {
+  position: relative;
+  max-width: 144rem;
+  margin: 0 auto;
+  overflow: hidden;
+  & > button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    & > i {
+      font-size: 5rem;
+      color: map-get($color, lightblack);
+    }
+  }
+  #mainSlide-prev {
+    left: 1.5rem;
+  }
+  #mainSlide-next {
+    right: 1.5rem;
+  }
+}
+.mainSlide-wrapper {
+  position: relative;
+  display: flex;
+  .main-slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    a {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .mainSlide-mobileimg {
+        display: none;
+      }
+    }
+  }
+}
+.mainSlide-pagination-wrapper {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  .mainSlide-pagination-span {
+    display: flex;
+    gap: 1.5rem;
+    .swiper-pagination-bullet {
+      width: 2rem;
+      height: 2rem;
+      border: 0.5px solid map-get($color, gray);
+      opacity: 1;
+      background: white;
+      border-radius: 50%;
+      text-indent: -9999999rem;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .swiper-pagination-bullet-active {
+      background: map-get($color, pointpurple);
+      border: none;
+    }
+  }
+  & > button {
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    i {
+      font-size: 2rem;
+      color: map-get($color, gray);
+    }
+  }
+}
+.museumInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.museumInfo-infoArea,
+.museumInfo-gotoInfo {
+  position: relative;
+}
+.museumInfo-infoArea {
+  flex: 2;
+  & > ul::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0.3rem;
+    margin-top: 3rem;
+    background: #222;
+  }
+  ul > .museumInfo-infoArea-info {
+    margin-bottom: 1rem;
+  }
+}
+.museumInfo-gotoInfo {
+  ul {
+    display: flex;
+    gap: 3rem;
+    li {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 0.3rem;
+        margin-top: 3rem;
+        background: map-get($color, pointpurple);
+      }
+      a {
+        padding: 1rem;
+        width: 100%;
+        font: 700 map-get($font, subtitle) "Noto Sans KR";
+        color: map-get($color, pointpurple);
+        transition: all 0.3s;
+        &::after {
+          z-index: -1;
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 100rem;
+          width: 100%;
+          height: 100%;
+          background: map-get($color, pointpurple);
+          transition: all 0.8s ease;
+        }
+      }
+      &:first-child {
+        a::after {
+          left: 0;
+        }
+        &:hover > a {
+          color: white;
+          transition-delay: 0.7s;
+          &::after {
+            top: 0;
+          }
+        }
+      }
+      &:last-child {
+        a::after {
+          left: 0;
+        }
+        &:hover > a {
+          color: white;
+          transition-delay: 0.7s;
+          &::after {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.museumInfo-infoArea-info,
+.museumInfo-infoArea-admission {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  h3 {
+    font: 700 2.4rem "Noto Sans KR";
+    i {
+      font-size: 2.4rem;
+      margin-right: 1rem;
+    }
+  }
+  & > ul {
+    display: flex;
+    gap: 1rem;
+    li {
+      display: flex;
+      gap: 1rem;
+      & > h5,
+      & > span {
+        font-size: map-get($font, desc);
+      }
+    }
+  }
+}
+
+// ----- exhibition ----- //
+.exhibition-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.exhibition-info-titlewrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.exhibition-pagination {
+  span {
+    cursor: pointer;
+    .fas {
+      font-size: 2rem;
+      margin-right: 1.5rem;
+    }
+    .fa-angle-right {
+      margin-right: 0;
+    }
+  }
+}
+.exhibition-slide-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .exhibition-slide-wrapper {
+    display: flex;
+    align-items: flex-start;
+    .exhibition-slide {
+      & > a {
+        position: relative;
+        display: inline-block;
+        &:hover {
+          .exhibition-slide-hoverText {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+.exhibition-slide-img {
+  width: 31.5rem;
+  height: 45rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.exhibition-slide-hoverText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  span {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    font: 400 map-get($font, subtitle) "Noto Sans KR";
+    color: white;
+  }
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.6);
+  }
+}
+.exhibition-slide-detail {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  .exhibition-slide-detail-btn {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    span {
+      display: inline-block;
+      border: 1px solid map-get($color, mainblack);
+      min-width: 6rem;
+      padding: 0.5rem 1.5rem;
+      text-align: center;
+      font: 400 map-get($font, span) "Noto Sans KR";
+    }
+    .exhibit-current {
+      background: map-get($color, mainblack);
+      color: white;
+    }
+  }
+  a {
+    font: 500 map-get($font, desc) "Noto Sans KR";
+    word-break: keep-all;
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+  p {
+    font: 400 map-get($font, span) "Noto Sans KR";
+    color: map-get($color, lightblack);
+  }
+}
+
+// ----- notice ----- //
+.notice {
+  width: 100%;
+  height: 100%;
+}
+.total-title {
+  & > i {
+    font-size: map-get($font, maintitle);
+    margin-right: 1.5rem;
+  }
+}
+.notice-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.notice-contents {
+  border-bottom: 1px solid map-get($color, gray);
+  width: calc(50% - 2%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  iframe {
+    width: 100%;
+    height: 38rem;
+  }
+  .notice-content-tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid map-get($color, gray);
+    & > a {
+      display: inline-block;
+      width: 2.8rem;
+      height: 2.8rem;
+      border: 1px solid map-get($color, mainblack);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        font-size: map-get($font, span);
+      }
+    }
+  }
+}
+.notice-content-button {
+  & > button {
+    width: 13rem;
+    padding: 1rem;
+    background: none;
+    border: none;
+    font: 400 2rem "Noto Sans KR";
+    color: map-get($color, gray);
+    cursor: pointer;
+    &.notice-btn-active {
+      border-bottom: 3px solid map-get($color, mainblack);
+      font-weight: 800;
+      color: map-get($color, mainblack);
+    }
+  }
+}
+.notice-banner {
+  width: calc(50% - 2%);
+  .notice-banner-container {
+    position: relative;
+    overflow: hidden;
+    .notice-banner-wrapper {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      .notice-banner-slide {
+        a {
+          display: block;
+          width: inherit;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.notice-pagination-wrapper {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  .notice-pagination-span {
+    .swiper-pagination-bullet {
+      width: 2rem;
+      height: 2rem;
+      border: 0.5px solid map-get($color, gray);
+      opacity: 1;
+      background: white;
+      border-radius: 50%;
+      text-indent: -9999999rem;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .swiper-pagination-bullet-active {
+      background: map-get($color, pointpurple);
+      border: none;
+    }
+  }
+  & > button {
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    i {
+      font-size: 2rem;
+      color: map-get($color, gray);
+    }
+  }
+}
+
+// ----- etcinfo ----- //
+.etcInfo {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.etcInfo-title {
+  display: flex;
+  a {
+    font: 700 map-get($font, subtitle) "Noto Sans KR";
+  }
+  margin-bottom: 3rem;
+}
+.etcInfo-education {
+  width: 25%;
+  .etcInfo-education-container {
+    img {
+      width: 100%;
+      border: 1px solid map-get($color, gray);
+      margin-bottom: 3rem;
+    }
+    h3 {
+      a {
+        font: 500 2.4rem "Noto Sans KR";
+      }
+      &:hover {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.etcInfo-event {
+  position: relative;
+  width: 20.5%;
+  .etcInfo-event-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    & > .etcInfo-title {
+      margin-bottom: 0;
+    }
+  }
+  .etcInfo-event-pagination {
+    width: 7rem;
+    position: relative;
+    .etcInfo-event-pagination-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      span {
+        font: 400 map-get($font, span) "Noto Sans KR";
+      }
+    }
+    .etcInfo-event-pagination-button {
+      position: absolute;
+      display: flex;
+      gap: 5rem;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      & > button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        i {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  .etcInfo-event-slide-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    .etcInfo-event-slide-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      .etcInfo-event-slide {
+        height: 100%;
+        flex-shrink: 0;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.etcInfo-online {
+  width: 46.5%;
+  .etcInfo-online-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    & > .etcInfo-title {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-bottom: 0;
+      & > a:last-child {
+        display: inline-block;
+        width: 2.8rem;
+        height: 2.8rem;
+        border: 1px solid map-get($color, mainblack);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          font-size: map-get($font, span);
+        }
+      }
+    }
+    .etcInfo-online-pagination {
+      width: 7rem;
+      position: relative;
+      .etcInfo-online-pagination-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        span {
+          font: 400 map-get($font, span) "Noto Sans KR";
+        }
+      }
+      .etcInfo-online-pagination-button {
+        position: absolute;
+        display: flex;
+        gap: 5rem;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & > button {
+          border: none;
+          background: none;
+          cursor: pointer;
+          i {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+.etcInfo-online-slide-container {
+  position: relative;
+  overflow: hidden;
+  .etcInfo-online-slide-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .etcInfo-online-slide {
+      position: relative;
+      height: 100%;
+      .etcInfo-online-slide-imgwrap {
+        position: relative;
+        background-color: rgba($color: #000000, $alpha: 0.1);
+        min-height: 38.9rem;
+        margin-bottom: 3rem;
+        overflow: hidden;
+        a {
+          display: block;
+          width: 67rem;
+          height: 100%;
+          img {
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+          }
+        }
+        a::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: inline-block;
+          width: 8.5rem;
+          height: 8.5rem;
+          background: url(https://www.museum.go.kr/ux/content/images/common/ico/ico_video.png)
+            no-repeat center;
+          z-index: 10;
+        }
+      }
+    }
+  }
+}
+.etcInfo-slide-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+  a {
+    font: 500 2.4rem "Noto Sans KR";
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  span {
+    font: 300 map-get($font, desc) "Noto Sans KR";
+  }
+}
+
+// ----- footer ----- //
+footer {
+  padding: 1.5rem 0;
+  ul {
+    li {
+      margin-bottom: 1.5rem;
+      a {
+        font: 400 1.5rem "Noto Sans KR";
+        color: map-get($color, gray);
+      }
+    }
+  }
+}
+.footerMenuWrap {
+  border-top: 1px solid #c8c8c8;
+  padding: 7.5rem 0 6rem 0;
+  & > ul {
+    display: flex;
+    justify-content: space-between;
+    & > li {
+      flex: 1;
+      .footerMenuTop-submenu {
+        margin-top: 1.5rem;
+        li:hover {
+          a {
+            font-weight: 700;
+            color: map-get($color, pointpurple);
+            text-decoration: underline;
+          }
+        }
+      }
+      & > a {
+        font: 500 2rem "Noto Sans KR";
+        color: map-get($color, mainblack);
+      }
+    }
+  }
+  .footerMenuBottom {
+    margin-top: 3rem;
+    li {
+      flex: initial;
+      a {
+        img {
+          width: 2rem;
+        }
+      }
+    }
+  }
+}
+.footerMenuTop {
+  & > li:nth-child(3) {
+    img {
+      margin-left: 0.5rem;
+      width: 10%;
+    }
+  }
+}
+.footerLinkWrap {
+  padding: 5.5rem 0;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  div {
+    ul {
+      li {
+        a {
+          color: map-get($color, mainblack);
+        }
+      }
+    }
+  }
+  .footerLink:first-child {
+    ul {
+      li {
+        a {
+          font: 500 map-get($font, desc) "Noto Sans KR";
+        }
+      }
+      li:hover {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .footerLink:nth-child(2) {
+    .footerLink-familysite {
+      position: relative;
+      margin-bottom: 1.5rem;
+      &.clickon {
+        & > a {
+          background: map-get($color, mainblack);
+          color: white;
+          i {
+            color: white;
+            transform: rotate(180deg);
+          }
+        }
+      }
+      & > a {
+        padding: 1.2rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 4.5rem;
+        border-bottom: 2px solid map-get($color, lightblack);
+        span {
+          width: 100%;
+          text-align: left;
+          font: 400 map-get($font, span) "Noto Sans KR";
+        }
+        i {
+          font-size: map-get($font, span);
+        }
+      }
+      & > ul {
+        display: none;
+        background: map-get($color, mainblack);
+        position: absolute;
+        width: 100%;
+        bottom: 100%;
+        z-index: 10;
+        transition: bottom 2s;
+        li {
+          padding: 1.5rem 1rem;
+          margin-bottom: 0;
+          text-align: center;
+          a {
+            font: 400 1.4rem "Noto Sans KR";
+            color: #cccc;
+          }
+          &:hover {
+            a {
+              color: map-get($color, pointyellow);
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footerLink:nth-child(3) {
+    ul {
+      li {
+        strong {
+          a {
+            font-weight: 700;
+            text-decoration: underline;
+          }
+        }
+        a {
+          font: 400 map-get($font, span) "Noto Sans KR";
+          color: map-get($color, lightblack);
+        }
+      }
+      li:hover {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+    .footerLink-mobile {
+      display: none;
+    }
+  }
+  .footerLink:last-child {
+    ul {
+      .footerLink-snslist {
+        & > ul {
+          display: flex;
+          gap: 3rem;
+          justify-content: flex-end;
+          li {
+            a {
+              i {
+                font-size: 3rem;
+              }
+            }
+          }
+        }
+      }
+      .footerLink-address {
+        text-align: right;
+        p {
+          font: 400 1.5rem/2 "Noto Sans KR";
+        }
+      }
+      .footerLink-webinfo {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        justify-content: flex-end;
+        a {
+          img {
+            width: 10rem;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 995px) {
+  section {
+    // margin: 7rem 5rem;
+    padding: 10rem 4rem;
+  }
+  .maincontentWrap {
+    margin: 0 auto;
+  }
+  .searchArea {
+    form {
+      input {
+        width: 70%;
+        height: 10rem;
+        font-size: 4rem;
+      }
+      button {
+        height: 10rem;
+        font-size: 4rem;
+      }
+    }
+  }
+  .pcHeader {
+    display: none;
+  }
+  .mobileHeader {
+    position: relative;
+    display: block;
+  }
+  .mobileInfo {
+    width: 100%;
+    height: 16rem;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .mob-logo {
+      width: 27rem;
+      height: 7rem;
+      background: url(https://www.museum.go.kr/ux/content/images/common/header_logo.png)
+        center center/cover no-repeat;
+    }
+    .mob-header-icon {
+      button {
+        border: none;
+        background: none;
+        margin-right: 4rem;
+        cursor: pointer;
+        i {
+          font-size: 4rem;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .mobileHeader-sideMenuWrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    background: white;
+    transition: right 1s;
+  }
+  .mobileHeader-sideMenu-Top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    .mobileHeader-language {
+      a {
+        position: relative;
+        display: block;
+        font-size: 3rem;
+        padding: 3rem 4rem;
+        i {
+          font-size: 3rem;
+        }
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 0.7rem;
+          background: map-get($color, mainblack);
+        }
+      }
+      ul {
+        display: none;
+      }
+      &.clickon {
+        color: white;
+        a {
+          background: map-get($color, mainblack);
+          i {
+            transform: rotate(180deg);
+          }
+        }
+        ul {
+          display: block;
+          border-top: 1px solid map-get($color, gray);
+          background: map-get($color, mainblack);
+          width: 100%;
+          text-align: center;
+          li {
+            & > a {
+              padding: 2rem;
+            }
+            &:hover {
+              color: map-get($color, pointyellow);
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      margin-right: 3rem;
+      i {
+        font-size: 4.5rem;
+      }
+    }
+  }
+  .mobileHeader-sideMenu-Total {
+    padding: 0 4rem;
+    .mobileHeader-sideMenu-loginInfo {
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        a {
+          font: 700 5rem "Noto Sans KR";
+        }
+      }
+      .loginInfoWrap {
+        display: flex;
+        gap: 3rem;
+        p {
+          a {
+            font: 500 3.5rem "Noto Sans KR";
+          }
+        }
+      }
+    }
+    .mobileHeader-sideMenu-group {
+      margin: 5rem 0;
+      padding: 3rem 5rem;
+      background: #eee;
+      border-top: 1px solid map-get($color, lightblack);
+      ul {
+        display: grid;
+        grid-template: auto auto auto / auto auto;
+        gap: 2rem;
+        li {
+          i {
+            font-size: 3.5rem;
+            margin-right: 2rem;
+          }
+          a {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+    .mobileHeader-slide-Menu {
+      padding-bottom: 10rem;
+      .mobileHeader-slide-gnbWrap {
+        & > li {
+          padding: 2.5rem 0;
+          border-bottom: 1px solid #eee;
+          a {
+            font: 500 3.5rem "Noto Sans KR";
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            i {
+              display: inline-block;
+              width: 3.5rem;
+              height: 3.5rem;
+              background: url(https://www.museum.go.kr/ux/content/images/common/ico/ico_lg_black_close.png)
+                no-repeat 98%;
+              background-size: contain;
+            }
+          }
+          &.clickon {
+            a {
+              i {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+        .mobileHeader-slide-sub-menu {
+          display: none;
+          li {
+            padding: 1.5rem 0;
+            &:first-child {
+              margin-top: 2rem;
+            }
+            a {
+              font: 400 3.5rem "Noto Sans KR";
+            }
+          }
+        }
+      }
+    }
+  }
+  .mobileHeaderDim {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 90;
+  }
+  .mainSlide {
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      .mainSlide-pcimg {
+        display: none;
+      }
+      .mainSlide-mobileimg {
+        display: block !important;
+      }
+    }
+    & > button {
+      display: none;
+    }
+    .mainSlide-pagination-wrapper {
+      bottom: 5rem;
+      right: 5rem;
+      .mainSlide-pagination-span {
+        .swiper-pagination-bullet {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+      }
+      & > button {
+        width: 7rem;
+        height: 6rem;
+        i {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  .museumInfo {
+    flex-direction: column;
+    align-items: start;
+    .museumInfo-infoArea {
+      width: 100%;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 0.5rem;
+        background: map-get($color, mainblack);
+        margin: 8rem 0;
+      }
+      ul {
+        & > li {
+          flex-direction: column;
+          align-items: start;
+          & > ul {
+            flex-direction: column;
+            gap: 3rem;
+            li {
+              flex-direction: row;
+              h5 {
+                font: 700 3rem "Noto Sans KR";
+                width: 40rem;
+              }
+              span {
+                font-size: 3rem;
+              }
+            }
+            .museumInfo-infoArea-admission {
+              border: 1px solid red;
+            }
+          }
+          h3,
+          i {
+            font-size: 5rem;
+          }
+          i {
+            margin-right: 3rem;
+          }
+        }
+        .museumInfo-infoArea-admission {
+          margin-top: 12rem;
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .museumInfo-gotoInfo {
+      margin: 0 auto;
+      ul {
+        li {
+          a {
+            font-size: 5rem;
+          }
+          &::after {
+            height: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .total-title {
+    i {
+      font-size: 6rem;
+      margin-right: 2rem;
+    }
+    a {
+      font-size: 6rem;
+    }
+  }
+  // exhibition
+  .exhibition-pagination {
+    span {
+      margin-right: 3rem;
+      i {
+        font-size: 5rem !important;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .exhibition-slide-container {
+    width: 100%;
+    margin: 0 auto;
+    .exhibition-slide-wrapper {
+      .exhibition-slide {
+        & > a {
+          width: inherit;
+          .exhibition-slide-img {
+            margin: 0 auto;
+            width: auto;
+            height: 80rem;
+            img {
+              background-size: contain;
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          .exhibition-slide-hoverText {
+            display: none;
+          }
+        }
+        .exhibition-slide-detail {
+          .exhibition-slide-detail-btn {
+            margin-top: 6rem;
+            gap: 2rem;
+            span {
+              font-size: 3rem;
+            }
+          }
+          a {
+            font-size: 3.5rem;
+          }
+          p {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+  //notice
+  .notice-wrap {
+    flex-direction: column;
+    gap: 8rem;
+    .notice-contents {
+      width: 100%;
+      iframe {
+        width: 100%;
+        height: 60rem;
+      }
+      .notice-content-tab {
+        a {
+          display: none;
+        }
+      }
+      .notice-content-button {
+        width: 100%;
+        display: flex;
+        button {
+          width: calc(100% / 4);
+          padding: 1.5rem;
+          font-size: 3.5rem;
+        }
+      }
+    }
+    .notice-banner {
+      width: 100%;
+    }
+  }
+  // etc
+  .etcInfo {
+    flex-direction: column;
+    gap: 6rem;
+    .etcInfo-education,
+    .etcInfo-event,
+    .etcInfo-online {
+      width: 100%;
+    }
+    .etcInfo-title > a {
+      font-size: 6rem;
+    }
+    .etcInfo-education-container {
+      h3 > a {
+        font-size: 4rem;
+      }
+    }
+    .etcInfo-event {
+      .etcInfo-event-pagination {
+        width: 15rem;
+        .etcInfo-event-pagination-number {
+          & > span {
+            font-size: 4rem;
+          }
+        }
+        .etcInfo-event-pagination-button {
+          gap: 9rem;
+          & > button {
+            & > i {
+              font-size: 5rem;
+            }
+          }
+        }
+      }
+      .etcInfo-slide-txt {
+        & > a {
+          font-size: 4rem;
+        }
+        & > span {
+          font-size: 3rem;
+        }
+      }
+    }
+    .etcInfo-online {
+      .etcInfo-online-title {
+        .etcInfo-title {
+          & > a:last-child {
+            width: 5rem;
+            height: 5rem;
+            i {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+      .etcInfo-online-pagination {
+        width: 15rem;
+        .etcInfo-online-pagination-number {
+          & > span {
+            font-size: 4rem;
+          }
+        }
+        .etcInfo-online-pagination-button {
+          gap: 9rem;
+          & > button {
+            & > i {
+              font-size: 5rem;
+            }
+          }
+        }
+      }
+      .etcInfo-online-slide-container {
+        .etcInfo-online-slide-wrapper {
+          .etcInfo-online-slide {
+            width: inherit;
+            flex: 0 0 100%;
+            .etcInfo-online-slide-imgwrap {
+              height: 50rem;
+              a::before {
+                width: 20rem;
+                height: 20rem;
+              }
+            }
+            .etcInfo-slide-txt {
+              a {
+                font-size: 4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // footer
+  .footerMenuWrap,
+  .footerLinkWrap {
+    padding: 7.5rem 4rem;
+  }
+  .footerMenuWrap {
+    .footerMenuTop {
+      display: none;
+    }
+    .footerMenuBottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      li > a {
+        font-size: 3.5rem;
+        & > img {
+          width: 3.3rem;
+        }
+      }
+    }
+  }
+  .footerLinkWrap {
+    flex-direction: column;
+    gap: 3rem;
+    .footerLink:nth-child(1) {
+      ul > li > a {
+        font-size: 3.5rem;
+      }
+    }
+    .footerLink:nth-child(2) {
+      gap: 6rem;
+      .footerLink-familysite {
+        a {
+          padding: 2rem 0rem;
+          span,
+          i {
+            font-size: 3.5rem;
+          }
+        }
+        & > ul {
+          li {
+            padding: 3rem 2rem;
+            a {
+              font-size: 3.5rem;
+            }
+          }
+        }
+      }
+    }
+    .footerLink:nth-child(3) {
+      ul:first-child {
+        display: none;
+      }
+      .footerLink-mobile {
+        display: block;
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        li {
+          a {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+    .footerLink:nth-child(4) {
+      ul {
+        .footerLink-snslist {
+          & > ul {
+            justify-content: center;
+            gap: 5rem;
+            li {
+              a {
+                i {
+                  font-size: 5rem;
+                }
+              }
+            }
+          }
+        }
+        .footerLink-address {
+          text-align: left;
+          p {
+            font-size: 3rem;
+          }
+          p:last-child {
+            margin-top: 3rem;
+          }
+        }
+        .footerLink-webinfo {
+          justify-content: center;
+          gap: 10rem;
+          padding-top: 3rem;
+          a > img {
+            width: 30rem;
+          }
+        }
+      }
+    }
+  }
+}

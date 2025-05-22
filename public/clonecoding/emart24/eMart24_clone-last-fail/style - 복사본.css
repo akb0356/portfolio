@@ -1,0 +1,2065 @@
+/*----------------Reset CSS-----------------*/
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-size: 10px;
+  font-weight: normal;
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--color-sub);
+}
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+:root {
+  /* color */
+  --color-main: #f9bb00;
+  --color-sub: #333;
+
+  /* title */
+  --size-maintitle: 4.8rem;
+  --size-subtitle: 1.6rem;
+}
+/*----------------Header CSS-----------------*/
+
+.header-mobwrap {
+  display: none;
+}
+.header-pcwrap {
+  position: relative;
+  max-width: 128rem;
+  width: 100%;
+  padding: 0 6rem;
+  padding-bottom: 1rem;
+  z-index: 10000;
+}
+.header-pcwrap.fixed {
+  position: fixed;
+  max-width: none;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(1rem);
+}
+.pcheader-subwrap {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+.pcheader-subwrap ul {
+  float: right;
+}
+.pcheader-subwrap ul li {
+  float: left;
+  margin-right: 2rem;
+}
+.pcheader-subwrap ul li:last-child {
+  margin-right: 0;
+}
+.pcheader-subwrap ul li a {
+  font: 400 1.2rem "NotoSansKR";
+  transition: color 0.3s;
+}
+.pcheader-subwrap ul li:hover a {
+  color: var(--color-main);
+}
+.pcheader-mainwrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.pcheader-mainwrap .pcheader-left .mainlogo {
+  width: 13rem;
+  height: 5rem;
+}
+.pcheader-mainwrap .pcheader-left .mainlogo a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/logo.png)
+    no-repeat center center/contain;
+}
+.pcheader-gnbwrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.pcheader-gnbwrap > ul {
+  display: flex;
+  gap: 8rem;
+}
+.pcheader-gnbwrap > ul > li {
+  position: relative;
+}
+.pcheader-gnbwrap > ul > li > a {
+  font: 500 1.7rem "NotoSansKR";
+  transition: color 0.3s;
+}
+.pcheader-gnbwrap > ul > li:hover > a {
+  color: var(--color-main);
+}
+.pcheader-gnbwrap::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 25rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.pcheader-submenu {
+  display: none;
+  position: absolute;
+  padding-top: 4rem;
+  left: 0;
+  z-index: 10;
+}
+.pcheader-submenu li {
+  white-space: nowrap;
+  margin-bottom: 1.5rem;
+}
+.pcheader-submenu li:last-child {
+  margin-bottom: 0;
+}
+.pcheader-submenu li a {
+  font: 1.4rem "NotoSansKR";
+  color: #ebebeb;
+  transition: color 0.3s;
+}
+.pcheader-submenu li:hover a {
+  color: var(--color-main);
+}
+.pcheader-gnbwrap.on::after {
+  display: block;
+}
+header.active .header-pcwrap {
+  background: rgba(255, 255, 255, 0.8);
+}
+header.active .header-subwrap {
+  height: 0;
+  overflow: hidden;
+}
+/* ----------------Top slider---------------- */
+main {
+  width: 94vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.mainslide-swiper {
+  position: relative;
+  display: block;
+  max-width: 144rem;
+  width: 100vw;
+  border-radius: 0 0 4.8rem 4.8rem;
+  z-index: -1;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.112);
+  overflow: hidden;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #fece6a !important;
+  position: absolute;
+  bottom: 10%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 1.8rem;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pagination-wrap {
+  position: relative;
+  display: flex;
+  top: -3rem;
+  left: 3.2rem;
+  width: 40rem;
+  height: 7rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.113);
+  z-index: 0;
+}
+.pagination-swiper-pager {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pause-button {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  margin-top: 0.1px;
+  top: 2rem;
+}
+.swiper-button-prev {
+  left: 40%;
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPrev.png)
+    no-repeat center center/cover;
+}
+.swiper-button-prev:hover {
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPrevHover.png)
+    no-repeat center center/cover;
+}
+.swiper-button-next {
+  left: 65%;
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderNext.png)
+    no-repeat center center/cover;
+}
+.swiper-button-next:hover {
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderNextHover.png)
+    no-repeat center center/cover;
+}
+.swiper-pause-button {
+  position: absolute;
+  left: 15%;
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPause.png)
+    no-repeat center center/cover;
+}
+.swiper-pause-button.play {
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPlay.png)
+    no-repeat center center/cover;
+}
+.swiper-pause-button.play:hover {
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPlayHover.png)
+    no-repeat center center/cover;
+}
+.swiper-pause-button:hover {
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPauseHover.png)
+    no-repeat center center/cover;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 0rem;
+}
+.pagination-index-wrap {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18rem;
+  margin-right: 1rem;
+}
+.numberpage .swiper-pagination-current {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  color: var(--color-main);
+}
+.numberpage .swiper-pagination-total {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999999;
+}
+.pagination-index-wrap h3 {
+  font-size: 1.5rem;
+}
+.swiper-pagination {
+  width: 70% !important;
+  height: 0.2rem !important;
+  top: initial !important;
+  left: initial !important;
+}
+
+/*----------------Section CSS-----------------*/
+content {
+  width: 100%;
+  margin: 0 auto;
+}
+section {
+  width: 100%;
+  background: white;
+  margin-bottom: 12rem;
+}
+
+.viewContentWrap {
+  width: 100%;
+  max-width: 128rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+  padding-bottom: 33.4rem;
+}
+
+/*-------------- EVENT CSS ---------------*/
+#event {
+  margin-top: 10rem;
+  display: flex;
+  gap: 1.6rem;
+}
+.event-left {
+  display: flex;
+  flex-direction: column;
+}
+.event-title h2 {
+  font: 700 var(--size-maintitle) / 4.5rem "Noto Sans KR";
+}
+.event-tit-plus a {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.event-tit-plus a p {
+  font: 500 var(--size-subtitle) "Noto Sans KR";
+}
+.event-tit-plus img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.event-tab {
+  height: 5.2rem;
+  border-radius: 4px 4px 4px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  margin-top: 2rem;
+  color: #999;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.event-tab.clickOn {
+  background: var(--color-main);
+  color: white;
+  box-shadow: 1rem 1rem 1.5rem rgba(240, 180, 1, 0.2);
+}
+.event-tab:hover {
+  background-color: var(--color-main);
+  color: white;
+  box-shadow: 1rem 1rem 1.5rem rgba(240, 180, 1, 0.2);
+}
+.event-tab-left {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.event-tab-left i {
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+}
+.event-tab-left p {
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+}
+.event-right {
+  width: 90rem;
+  height: 35rem;
+  margin-left: 1rem;
+  margin: 0 auto;
+}
+
+iframe {
+  width: 100%;
+  height: 130%;
+}
+
+/*only*/
+#only {
+  width: 100%;
+  height: 100%;
+  margin-top: 10rem;
+  margin-bottom: 16rem;
+}
+.only-title h2 {
+  font: 700 var(--size-maintitle) "Noto Sans KR";
+  color: black;
+}
+.only-title p {
+  font: 400 var(--size-subtitle) / 2.4 "Noto Sans KR";
+  color: var(--color-main);
+}
+.only-sliderWrap {
+  position: relative;
+  overflow: hidden;
+}
+.only-slides {
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin-top: 5rem;
+}
+.only-slides li:last-child {
+  margin-right: 0 !important;
+}
+.only-slide {
+  width: calc(100% / 4);
+  background: white;
+  border: 1px solid #ebebeb;
+  border-radius: 2.4rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
+  transition: all 0.1s;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.only-slide:hover {
+  border: 4px solid var(--color-main);
+  transform: translateY(-3rem);
+  margin-bottom: -2rem;
+}
+.only-slide:hover .only-slide-img img {
+  transform: scale(1.1);
+}
+.only-slide a {
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.only-slide-img {
+  width: 100%;
+  height: 30rem;
+  border-radius: 0 0 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.only-slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+.onlyslide-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.onlyslide-info-img {
+  width: 5rem;
+  height: 8rem;
+  overflow: hidden;
+}
+.onlyslide-info-img img {
+  width: 100%;
+}
+.onlyslide-info-text {
+  width: 100%;
+  padding: 0 2rem 5rem 2rem;
+  text-align: center;
+}
+.onlyslide-tit {
+  font: 500 2rem "Noto Sans KR";
+}
+.onlyslide-desc {
+  font-size: 1.5rem;
+  color: #999999;
+  text-align: center;
+}
+
+/*--------------buisness---------------*/
+#buisness {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 25rem 0;
+}
+.yellowBackground {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -6vw;
+  width: 410rem;
+  height: 95rem;
+  padding: 0 3.2rem;
+  background: linear-gradient(
+    90deg,
+    #fece6a 7.62%,
+    rgba(254, 207, 106, 0.591) 128rem,
+    #fff
+  );
+  opacity: 1;
+  border-radius: 6.4rem 0 0 19.2rem;
+}
+
+.title-buisness {
+  width: 100%;
+  z-index: 1;
+}
+.buisness-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  z-index: 10;
+}
+.buisness-title h1 {
+  font: 700 var(--size-maintitle) "Noto Sans KR";
+  color: black;
+}
+.buisness-title p {
+  font: 400 var(--size-subtitle) / 2.4 "Noto Sans KR";
+}
+#buisness .buisness-menu {
+  position: relative;
+  width: 100%;
+  height: 42rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+  padding-top: 3rem;
+}
+.buisness-menu li {
+  width: 100%;
+  height: 100%;
+  max-height: 42rem;
+  padding: 2.4rem;
+  background: white;
+  border-radius: 2.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+}
+.buisness-menu li a {
+  display: inline-block;
+}
+.buisness-menu li:hover {
+  transform: translateY(-3%);
+}
+.buisness-menu .description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.description .caption {
+  font: 400 1.7rem/2.55rem "Noto Sans KR";
+}
+.buisness-menu .title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buisness-menu li .description .title h1 {
+  width: 100%;
+  font: 500 2.8rem "Noto Sans KR";
+  color: black;
+}
+.buisness-menu li .description .title .iconwrap {
+  width: 5rem;
+  height: 4rem;
+  overflow: hidden;
+}
+.buisness-menu li .description .title .iconwrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.buisness-menu li a .icon {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  max-height: 50rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.buisness-menu li a .icon img {
+  width: 90%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+.buisness-menu li:nth-child(1):hover .icon img {
+  animation: grayscale 2s alternate infinite;
+}
+@keyframes grayscale {
+  0% {
+    transform: translateY(0%);
+    filter: grayscale(100%);
+  }
+  50% {
+    filter: grayscale(0);
+  }
+  100% {
+    transform: translateY(-5%);
+    filter: grayscale(100%);
+  }
+}
+.buisness-menu li:nth-child(2):hover .icon .icon-coin,
+.buisness-menu li:nth-child(2):hover .icon .icon-coin2 {
+  animation: dropdown 3s ease-in-out infinite;
+}
+.buisness-menu li a .icon .icon-coin,
+.buisness-menu li a .icon .icon-coin2 {
+  position: absolute;
+}
+.buisness-menu li a .icon .icon-coin2 {
+  animation-delay: 3.3s;
+}
+@keyframes dropdown {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: 10%;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+.buisness-menu li:nth-child(3):hover .icon img {
+  animation: bounce 1.5s alternate infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/*-------------- MAPSERVICE CSS ---------------*/
+#mapservice {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10rem 0;
+  gap: 7rem;
+  position: relative;
+}
+.mapservice-search {
+  width: 55%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.mapservice-search > h3 {
+  width: max-content;
+  font: 700 var(--size-maintitle) "Noto Sans KR";
+  color: black;
+  margin-bottom: 5rem;
+}
+.mapservice-search-group {
+  width: 100%;
+  position: relative;
+}
+.mapservice-searchbarwrap {
+  width: 100%;
+  min-height: 7rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.mapservice-searchbarwrap > input {
+  width: 100%;
+  border: 2px solid var(--color-main);
+  border-radius: 0.8rem 0.8rem 0.8rem 3.2rem;
+  padding: 2rem 2.5rem;
+  font: 400 2.4rem "Noto Sans KR";
+}
+.mapservice-searchbarwrap > input:focus {
+  outline: none;
+}
+.mapservice-searchbarwrap > img {
+  position: absolute;
+  right: 2rem;
+  width: 5.4rem;
+  height: 5.4rem;
+  cursor: pointer;
+}
+.mapservice-tagwrap {
+  width: 100%;
+  position: relative;
+}
+.mapservice-tagwrap > ul {
+  width: 100%;
+  gap: 1.6rem;
+  display: flex;
+}
+.mapservice-tagwrap > ul > li {
+  width: 100%;
+  background: #ebebeb;
+  padding: 1.2rem 1.6rem;
+  border-radius: 1.6rem 0rem 1.6rem 1.6rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+.mapservice-tagwrap > ul > li:hover {
+  background: var(--color-main);
+}
+.mapservice-tagwrap > ul > li > a {
+  font: 500 1.7rem "Noto Sans KR";
+}
+.mapservice-imgwrap {
+  width: 40%;
+  height: 33.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.mapservice-map {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-40%);
+}
+.mapservice-pin {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  max-width: 41.5rem;
+  z-index: 5;
+  animation: scale 1s ease-in-out, bounce 2s ease-in-out infinite;
+}
+@keyframes scale {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/*-------------- APPSERVICE CSS ---------------*/
+#appservice {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  gap: 12.4rem;
+  height: 97.2rem;
+  align-items: center;
+  margin-top: 10rem;
+}
+#appservice .graybackground {
+  position: absolute;
+  width: 409.2rem;
+  height: 95.3rem;
+  right: -2.4rem;
+  border-radius: 0px 256px 64px 0px;
+  overflow: hidden;
+  background: linear-gradient(
+    270deg,
+    #f2f2f2 5.25%,
+    rgba(245, 244, 243, 0.45) 128rem,
+    #fff
+  );
+  animation: slidebackground 1s linear;
+}
+@keyframes slidebackground {
+  0% {
+    right: 20vw;
+  }
+  100% {
+    right: 0vw;
+  }
+}
+.appservice-preview {
+  height: 70rem;
+  z-index: 1;
+}
+.appservice-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.appservice-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.appservice-description .titlewrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.6rem;
+  margin-bottom: 9.6rem;
+}
+.appservice-description .titlewrap .title {
+  text-align: center;
+}
+.appservice-description .titlewrap .title h2 {
+  font: 400 2rem "Noto Sans KR";
+  color: var(--color-main);
+  margin-bottom: 2rem;
+}
+.appservice-description .titlewrap .title h1 {
+  font: 700 var(--size-maintitle) "Noto Sans KR";
+  color: black;
+}
+.appservice-description .titlewrap .button {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+.appservice-description .titlewrap .button .button-detail a {
+  font: 500 1.5rem "Noto Sans KR";
+  transition: all 0.3s;
+}
+.appservice-description .titlewrap .button:hover .button-detail a {
+  color: var(--color-main);
+}
+.appservice-description .titlewrap .button .icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.appservice-description .titlewrap .button .icon img {
+  width: 100%;
+  height: 100%;
+}
+.appservice-description .downloadwrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+.appservice-description .downloadwrap .button {
+  display: flex;
+  gap: 1.6rem;
+  transition: all 0.3s;
+}
+.appservice-description .downloadwrap .button:hover {
+  scale: 0.9;
+}
+.appservice-description .downloadwrap .button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 19.6rem;
+  height: 5.8rem;
+  padding: 0.8rem 2.4rem;
+  border-radius: 0.8rem;
+  box-shadow: 0rem 0.8rem 2.4rem rgba(0, 0, 0, 0.05);
+  background-color: var(--color-main);
+  cursor: pointer;
+}
+.appservice-description .downloadwrap .button .icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  overflow: hidden;
+}
+.appservice-description .downloadwrap .button a h1 {
+  font: 400 var(--size-subtitle) "Noto Sans KR";
+}
+.appservice-description .downloadwrap .button .icon img {
+  width: 100%;
+  height: 100%;
+}
+
+/*-------------- MAGAZINE CSS ---------------*/
+
+#magazine {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 1.6rem;
+  position: relative;
+  margin: 9.6rem 0;
+  padding: 0 3.2rem;
+}
+.magazine-title {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  gap: 2rem;
+  transition: all 0.3s;
+  animation: jump 1s linear;
+  word-break: keep-all;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.magazine-txt-wrap > h1 {
+  width: 100%;
+  font: 400 var(--size-maintitle) / 1.2 "Noto Sans KR";
+  color: black;
+}
+.magazine-txt-wrap > h1 > span {
+  font: 700 var(--size-maintitle) / 1.2 "Noto Sans KR";
+}
+.magazine-txt-wrap > p {
+  font: 400 var(--size-subtitle) / 2 "Noto Sans KR";
+  color: var(--color-main);
+}
+.magazine-snsicon-wrap {
+  width: 100%;
+  display: flex;
+}
+.magazine-snsicon-wrap ul {
+  display: flex;
+}
+.magazine-snsicon-wrap ul > li {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.magazine-snsicon-wrap ul > li > a > i {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #eeeeee;
+  transition: all 0.3s;
+}
+.magazine-snsicon-wrap ul > li > a > i:hover {
+  color: #858585;
+}
+/* magazine slider */
+.magazine-sliderwrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+.magazine-swiper-button-prev,
+.magazine-swiper-button-next {
+  position: absolute;
+  width: 5.4rem;
+  height: 5.4rem;
+  font-size: 0;
+  border: 1px solid #999;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 50 !important;
+}
+.magazine-swiper-button-prev:hover,
+.magazine-swiper-button-next:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+.magazine-swiper-button-prev {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.magazine-swiper-button-next {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+}
+.magazine-swiper-button-prev img,
+.magazine-swiper-button-next img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 50;
+}
+.magazine-swiper-wrapper {
+  height: 60rem;
+  display: flex;
+  position: relative;
+}
+.magazine-swiper-wrapper li:nth-child(even) {
+  transform: translateY(8%);
+}
+.magazine-swiper-wrapper > li:nth-child(1) {
+  animation: moveleft 1s ease-out;
+}
+@keyframes moveleft {
+  0% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.magazine-swiper-wrapper > li:nth-child(2) {
+  animation: movetop 1s linear;
+}
+@keyframes movetop {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(8%);
+    opacity: 1;
+  }
+}
+.magazine-swiper-wrapper > li:nth-child(3) {
+  animation: movedown 1s linear;
+}
+@keyframes movedown {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.magazine-swiper-slide {
+  width: 30rem;
+  height: 100%;
+  transition: all 0.3s;
+}
+.magazine-swiper-slide .magazin-slide-imgwrap {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  border: 4px solid transparent;
+  border-radius: 3.2rem 3.2rem 3.2rem 0;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+.magazine-swiper-slide .magazin-slide-imgwrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+.magazine-swiper-slide:hover .magazin-slide-imgwrap img {
+  scale: 1.2;
+}
+.magazine-swiper-slide:hover .magazin-slide-imgwrap {
+  border-color: #f9bb00;
+}
+.magazine-swiper-slide:hover .magazin-slide-snstitle h2,
+.magazine-swiper-slide:hover .magazin-slide-title {
+  color: var(--color-main);
+}
+.magazine-swiper-slide:hover .magazin-slide-snstitle img {
+  border-color: var(--color-main);
+}
+.magazin-slide-snstitle {
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.magazin-slide-snstitle img {
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 0.2rem;
+  border: 1px solid #ebebeb;
+  border-radius: 50%;
+}
+.magazin-slide-snstitle h2 {
+  font: 400 2.4rem "Noto Sans KR";
+}
+.magazin-slide-title {
+  width: 90%;
+  margin-top: 0.4rem;
+  max-width: 30rem;
+  min-height: 4rem;
+  color: #999;
+  font: 400 var(--size-subtitle) / 1.5 "Noto Sans KR";
+  text-align: left;
+  padding-left: 5.6rem;
+  word-break: keep-all;
+}
+
+/*-------------- CUSTOMER CSS ---------------*/
+#customer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0 3.2rem;
+  margin-bottom: 0;
+}
+.customer-notice {
+  width: 100%;
+  padding: 3.2rem 3.2rem 4rem 3.2rem;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+  border-radius: 3.2rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.customer-notice-titlewrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+.customer-notice-titlewrap h2 {
+  width: 100%;
+  font: 700 2rem "Noto Sans KR";
+  color: black;
+}
+.customer-notice-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.customer-notice-button-txt span {
+  font: 400 var(--size-subtitle) "Noto Sans KR";
+  margin-right: 1rem;
+}
+.customer-notice-button-img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.customer-notice-button-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.customer-notice-lists {
+  width: 100%;
+}
+.customer-notice-lists li {
+  width: inherit;
+  margin-bottom: 2.4rem;
+  transition: all 0.3s;
+}
+.customer-notice-lists li:last-child {
+  margin-bottom: 0;
+}
+.customer-notice-lists li a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s;
+  color: #999;
+}
+.customer-notice-lists li a h2,
+.customer-notice-lists li a span {
+  font: 400 var(--size-subtitle) "Noto Sans KR";
+  color: #999;
+  transition: all 0.3s;
+}
+.customer-notice-lists li:hover a h2,
+.customer-notice-lists li:hover a span {
+  color: var(--color-main);
+}
+.customer-notice-lists li a h2 {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.customer-notice-lists li a span {
+  width: inherit;
+  text-align: right;
+}
+
+/*----------------Footer CSS-----------------*/
+footer {
+  width: 100%;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.footer-wrap {
+  width: 100%;
+  max-width: 128rem;
+  margin-top: 6.4rem;
+  margin-bottom: 4rem;
+  padding: 0 2.4rem;
+}
+.footer-fnbwrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-fnb {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rem;
+}
+.footer-fnb a {
+  font: 300 1.2rem "Noto Sans KR";
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.footer-fnb a:hover {
+  color: var(--color-main);
+}
+.footer-fnb li::after {
+  content: "";
+  display: inline-block;
+  width: 0.1rem;
+  height: 60%;
+  margin: 0 1rem;
+  background: var(--color-sub);
+}
+.footer-fnb li:last-child:after {
+  display: none;
+}
+.footer-fnb li:nth-child(1) a,
+.footer-fnb li:nth-child(2) a,
+.footer-fnb li:nth-child(3) a {
+  font-weight: 500;
+}
+.footer-fnbwrap .footer-familysite {
+  font: 300 1.2rem "Noto Sans KR";
+}
+.footer-contentswrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 6.4rem;
+}
+.footer-contentswrap .title p {
+  font: 300 1.2rem "Noto Sans KR";
+  margin-bottom: 3.6rem;
+}
+.footer-contentswrap .info span {
+  font: 300 1.2rem/2.4rem "Noto Sans KR";
+  color: #999;
+}
+.footer-contentswrap .info .pcBr {
+  display: none;
+}
+.footer-contentswrap .footer-sns {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  margin-top: 4rem;
+}
+.footer-contentswrap .footer-sns .snsicon {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background-color: white;
+  border: 1.5px solid transparent;
+  transition: all 0.3s;
+}
+.footer-contentswrap .footer-sns .snsicon a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-contentswrap .footer-sns .snsicon img {
+  width: 100%;
+  height: 100%;
+}
+.footer-contentswrap .footer-sns .snsicon:nth-child(4) img {
+  width: 70%;
+  height: 70%;
+}
+.footer-contentswrap .footer-sns .snsicon:hover {
+  border-color: var(--color-main);
+}
+
+/* tablet */
+@media screen and (max-width: 1050px) {
+  .pcheader-gnbwrap ul {
+    gap: 5rem;
+  }
+  .pcheader-gnbwrap > ul > li > a {
+    font-size: 1.8rem;
+  }
+  .pcheader-submenu > li > a {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /*----------------Common CSS-----------------*/
+  .viewContentWrap {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  :root {
+    /* title */
+    --size-maintitle: 3.8rem;
+    --size-subtitle: 1.6rem;
+  }
+  /*----------------event CSS-----------------*/
+  .event-left {
+    width: 60%;
+  }
+  iframe {
+    height: 100%;
+  }
+
+  /*----------------Business CSS-----------------*/
+  .buisness-menu li {
+    height: 80%;
+  }
+  .yellowBackground {
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+  }
+
+  /*----------------Map Service CSS-----------------*/
+  .mapservice-search {
+    width: 100%;
+    max-width: none;
+  }
+  .mapservice-imgwrap {
+    display: none;
+  }
+  .mapservice-searchbarwrap > input {
+    border-radius: 1.5rem;
+    height: 8rem;
+  }
+  .mapservice-tagwrap > ul {
+    width: 100%;
+  }
+  .mapservice-tagwrap > ul > li {
+    padding: 1.5rem 2.5rem;
+    border-radius: 3rem 0 3rem 3rem;
+  }
+  /*----------------Magazine CSS-----------------*/
+  .appservice {
+    height: auto;
+    margin-bottom: 9.6rem !important;
+  }
+  .graybackground {
+    display: none;
+  }
+  .appservice-preview {
+    display: none;
+  }
+  .appservice-description {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    border: 1px solid #ebebeb;
+    border-radius: 1.6rem;
+    background: #f3f3f3;
+  }
+  .appservice-description::after {
+    content: "";
+    background: url(https://www.emart24.co.kr/assets/assets/imgs/appService_five.png)
+      center center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 3rem;
+    bottom: 0;
+    height: 100%;
+    width: 25rem;
+    white-space: nowrap;
+  }
+  .appservice-description .titlewrap {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    padding-left: 14.2rem;
+  }
+  .appservice-description .titlewrap .title {
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .appservice-description .titlewrap .title h2 {
+    display: none;
+  }
+  .appservice-description .titlewrap .title h1 {
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  .appservice-description .titlewrap .button {
+    display: none;
+  }
+  .downloadwrap {
+    width: 100%;
+    padding-left: 30rem;
+  }
+  .downloadwrap .button {
+    width: 100%;
+    flex: 1;
+    background: var(--color-main);
+    text-align: center;
+    border-radius: 1.5rem;
+  }
+  .downloadwrap span {
+    display: none;
+  }
+  .appservice-description .downloadwrap .button a {
+    width: 100%;
+    height: 9rem;
+    border-radius: 1.5rem;
+  }
+  .appservice-description .downloadwrap .button .icon {
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    font-family: 0.1rem;
+  }
+  .appservice-description .downloadwrap .button a h1 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  /*----------------Magazine CSS-----------------*/
+  #magazine {
+    flex-direction: column;
+  }
+  .magazine-txt-wrap h1,
+  .magazine-txt-wrap h1 span {
+    font-size: 3.6rem;
+    font-weight: 700;
+  }
+  .magazine-txt-wrap > h1 br,
+  .magazine-txt-wrap p,
+  .magazine-snsicon-wrap,
+  .magazine-swiper-button-prev,
+  .magazine-swiper-button-next {
+    display: none;
+  }
+  .magazine-txt-wrap span {
+    margin-left: 1rem;
+  }
+  .magazine-swiper-wrapper {
+    height: 100%;
+  }
+  .magazine-swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+  .magazine-swiper-slide .magazin-slide-imgwrap {
+    width: 100%;
+    height: 100%;
+  }
+  .magazin-slide-title {
+    max-width: 100%;
+  }
+  .magazine-swiper-wrapper li:nth-child(even) {
+    transform: translateY(0%);
+  }
+
+  /*----------------Customer CSS-----------------*/
+  #customer {
+    flex-direction: column;
+    gap: 5rem;
+    margin-bottom: 14rem;
+  }
+  .customer-notice,
+  .customer-news {
+    max-width: none;
+  }
+  .customer-notice-button {
+    width: 100%;
+    height: 100%;
+    max-width: 30rem;
+  }
+  .customer-notice-button a:first-child {
+    width: 100%;
+    max-width: none;
+    text-align: right;
+    margin-right: 1rem;
+  }
+  .customer-notice-button a:nth-child(2) {
+    width: 3.5rem;
+  }
+  .customer-notice-button a:first-child span {
+    width: 100%;
+  }
+  .customer-notice-button-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*----------------Footer CSS-----------------*/
+
+  footer {
+    margin: 0;
+    justify-content: start;
+  }
+  .footer-wrap {
+    flex-direction: column;
+    justify-content: start;
+    padding: 0 1rem;
+  }
+  .footer-fnbwrap {
+    justify-content: space-between;
+    align-items: start;
+  }
+  .footer-familysite {
+    font-size: 2.3rem;
+  }
+  .footer-contentswrap {
+    margin-top: 6.4rem;
+  }
+  .footer-contentswrap .footer-sns {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 990px) {
+  /*----------------Header CSS-----------------*/
+  .header-pcwrap {
+    display: none;
+  }
+  .header-mobwrap {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8rem;
+    z-index: 1000;
+    background-color: white;
+  }
+  .mobheader-center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 100;
+  }
+  .mobheader-center::after {
+    content: "";
+    position: absolute;
+    right: -9999rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-main);
+    transition: right 0.3s;
+  }
+  .mobheader-center.centerActive::after {
+    right: 0;
+  }
+  .mobheader-center .mainlogo {
+    width: 100%;
+    height: 3rem;
+    background: url("https://www.emart24.co.kr/assets/assets/imgs/logo.png")
+      no-repeat center center;
+    background-size: contain;
+  }
+  .mobheader-center .mainlogo.logoActive {
+    background: url("https://www.emart24.co.kr/assets/assets/imgs/whiteLogo.png")
+      no-repeat center center;
+    background-size: contain;
+    z-index: 10;
+  }
+  .trigger {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+  }
+  .trigger .fa-x {
+    display: none;
+  }
+  .trigger i {
+    color: var(--color-main);
+    font-size: 3rem;
+  }
+  .trigger.triggerActive i {
+    color: white;
+  }
+  .trigger.triggerActive .fa-bars {
+    display: none;
+  }
+  .trigger.triggerActive .fa-x {
+    display: block;
+  }
+  .mobheader-gnbwrap {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    top: 10rem;
+    left: 99999rem;
+    background-color: white;
+    z-index: 100;
+    overflow: scroll;
+    padding-bottom: 20rem;
+    transition: left 0.3s;
+  }
+  .mobheader-gnbwrap.gnbwrapActive {
+    left: 0;
+  }
+  .mobheader-gnb-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    gap: 3rem;
+  }
+  .mobheader-gnb-list li {
+    cursor: pointer;
+  }
+  .mobheader-gnb-list > li.mobSubActive > .gnb-listbox-title .title h1 {
+    color: var(--color-main);
+  }
+  .mobheader-gnb-list > li.mobSubActive > .gnb-listbox-title i {
+    transform: rotate(90deg);
+  }
+  .mobheader-gnb-list > li.mobSubActive > .gnb-list-detail {
+    height: initial;
+    opacity: 1;
+  }
+  .mobheader-gnb-list > li.mobSubActive > .gnb-list-detail {
+    padding: 1.5rem 2.4rem;
+  }
+  .gnb-listbox-title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .gnb-listbox-title .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .gnb-listbox-title .title .icon {
+    display: flex;
+    flex-direction: row;
+    width: 7rem;
+  }
+  .gnb-listbox-title .title .icon img {
+    width: 100%;
+    height: 100%;
+  }
+  .gnb-listbox-title .title h1 {
+    font: 700 3.5rem/2.4 "NotoSansKR";
+  }
+  .gnb-listbox-title i {
+    color: var(--color-main);
+    font-size: 3rem;
+    transition: transform 0.3s;
+  }
+  .gnb-list-detail {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    border: 1px solid #ffedc3;
+    border-radius: 1.6rem;
+    background-color: #fff7e5;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 2.4rem;
+    transition: all 0.3s;
+  }
+  .gnb-list-detail li a {
+    display: inline-block;
+    padding: 1.5rem 0;
+    font-size: 2.8rem;
+    font-weight: 500;
+  }
+  .mobheader-snb {
+    width: 100%;
+    padding-top: 4rem;
+  }
+  .mobheader-snb-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .mobheader-snb-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 4rem;
+    border: 0.05rem solid #ebebeb;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+  }
+  .mobheader-snb-list li a {
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1;
+  }
+  .mobheader-snb-list li i {
+    font-size: 3rem;
+  }
+  .mobheader-dim {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    left: 0;
+    top: 10rem;
+    background: white;
+    z-index: -10;
+    overflow-x: hidden;
+    display: none;
+  }
+  .mobheader-dim.dimActive {
+    display: block;
+  }
+  /*----------------Main CSS-----------------*/
+  main {
+    padding-top: 8rem;
+  }
+  /*----------------Event CSS-----------------*/
+  iframe {
+    height: 100%;
+  }
+
+  /*----------------Only CSS-----------------*/
+  .only-slides {
+    width: 150%;
+  }
+}
+/* mobile */
+@media (max-width: 768px) {
+  /*----------------Common CSS-----------------*/
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 5px;
+    font-weight: normal;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .viewContentWrap {
+    width: 100%;
+    max-width: none;
+  }
+  /*----------------Header CSS-----------------*/
+  .header-mobwrap {
+    height: 10rem;
+  }
+  /*----------------Main CSS-----------------*/
+  main {
+    width: 100%;
+  }
+  .mainslide-swiper {
+    height: 44.9vw;
+    width: 84vw;
+    box-shadow: none;
+  }
+  .swiper-slide a {
+    width: 100%;
+    height: 100%;
+  }
+
+  .pagination-wrap {
+    background: transparent;
+    box-shadow: none;
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3rem;
+  }
+  .pagination-swiper-pager,
+  .numberpage {
+    display: none;
+  }
+  .pagination-index-wrap {
+    width: 100%;
+  }
+  .swiper-pagination {
+    width: 100% !important;
+    height: 0.3rem !important;
+  }
+
+  /*----------------Event CSS-----------------*/
+  #event {
+    width: 100%;
+    height: 80rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem;
+  }
+  .event-left {
+    width: 100%;
+  }
+  .event-title {
+    font-size: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .event-tit-plus a p {
+    font-size: 3rem;
+  }
+  .event-tit-plus a img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .event-tabs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+  }
+  .event-tab {
+    width: 33%;
+    height: 8rem;
+    border-radius: 3rem;
+    justify-content: center;
+    border: 1px solid #ddd;
+  }
+  .event-tab-left {
+    justify-content: center;
+  }
+  .event-tab i {
+    font-size: 3rem;
+  }
+  .event-tab p {
+    font-size: 3rem;
+  }
+  .event-tab-right {
+    display: none;
+  }
+  .event-right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    border: none;
+    overflow: hidden;
+  }
+
+  /*----------------Only CSS-----------------*/
+  #only {
+    padding: 0 4rem;
+  }
+  .only-title p {
+    display: none;
+  }
+  .only-slides {
+    width: 130% !important;
+  }
+  .onlyslide-tit {
+    font-size: 3rem;
+  }
+  .onlyslide-desc {
+    font-size: 2.5rem;
+  }
+
+  /*----------------Buisness CSS-----------------*/
+  #buisness {
+    width: 100%;
+    height: 100%;
+  }
+  .yellowBackground {
+    border-radius: 0;
+    height: 100%;
+    background: #ffebc1;
+  }
+  .title-buisness {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .buisness-title {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .buisness-title p {
+    display: none;
+  }
+  #buisness .buisness-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #buisness .buisness-menu li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  #buisness .buisness-menu li:hover {
+    transform: none;
+  }
+  .buisness-menu li a .description {
+    margin-top: 2.5rem;
+  }
+  .buisness-menu li a .description .title h1 {
+    font: 700 3rem "Noto Sans KR";
+  }
+  .buisness-menu .description .caption {
+    font: 500 3rem/2 "Noto Sans KR";
+    color: #9999;
+  }
+  .buisness-menu .iconwrap {
+    display: none;
+  }
+  .buisness-menu li a .icon {
+    width: 50%;
+    right: -5%;
+  }
+
+  /*----------------Map Service CSS-----------------*/
+  #mapservice {
+    padding: 0 2rem;
+  }
+  .mapservice-tagwrap > ul > li > a {
+    font-size: 3rem;
+  }
+
+  /*----------------appservice CSS-----------------*/
+  #appservice {
+    padding: 0 2rem;
+    height: 100%;
+    margin: 10rem 0;
+  }
+  .appservice-description .titlewrap {
+    margin-bottom: 3rem;
+    padding-left: 30rem;
+  }
+
+  /*----------------Magazine CSS-----------------*/
+  .magazin-slide-snstitle h2 {
+    font-size: 3.5rem;
+  }
+  .magazin-slide-title {
+    font-size: 3rem;
+  }
+
+  /*----------------Customer CSS-----------------*/
+  .customer-notice-titlewrap h2 {
+    font-size: 3.2rem;
+  }
+  .customer-notice-button-txt span {
+    margin-right: 0;
+    font-size: 2.5rem;
+  }
+  .customer-notice-lists li a h2,
+  .customer-notice-lists li a span {
+    font-size: 2.8rem;
+  }
+
+  /*----------------Footer CSS-----------------*/
+  .footer-fnbwrap {
+    flex-direction: column;
+  }
+  .footer-fnb {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer-fnb li a,
+  .footer-fnbwrap .footer-familysite p,
+  .footer-companyinfo .title p {
+    font-size: 2.5rem;
+  }
+  .footer-contentswrap .footer-sns .snsicon {
+    width: 7rem;
+    height: 7rem;
+  }
+  .footer-companyinfo .info p {
+    font-size: 2.5rem;
+    line-height: 2;
+  }
+}
+@media (max-width: 650px) {
+  .only-slides {
+    width: 200% !important;
+  }
+}

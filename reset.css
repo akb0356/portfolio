@@ -1,0 +1,144 @@
+/*----------------Reset CSS-----------------*/
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@200;300;400;500;600;800&family=Noto+Sans:wght@200;300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "YesevaOne";
+  src: url("./font/YesevaOne-Regular.ttf");
+  src: url("./font/YesevaOne-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Welland";
+  src: url("./font/Welland-FREE.otf");
+  src: url("./font/Welland-FREE.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Indira_K";
+  src: url("./font/Indira_K.ttf");
+  src: url("./font/Indira_K.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif, "Noto Sans", "Noto Sans KR", sans-serif;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 10px;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+  color: var(--main-color);
+  word-break: keep-all;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+:root {
+  --main-color: #222222;
+  --sub-color: #ff5c00;
+  --middlegrey-color: #777777;
+  --grey-color: #eeeeee;
+}

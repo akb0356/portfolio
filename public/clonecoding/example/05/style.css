@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
+}
+figure h1 {
+  position: absolute;
+  top: 7vh;
+  left: 4vw;
+  font-size: 0;
+}
+figure h1 strong {
+  font-size: 36px;
+  color: white;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
+figure h1 span {
+  font-size: 12px;
+  color: white;
+  opacity: 0.8;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+figure > p {
+  position: absolute;
+  bottom: 7vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font: normal 12px 1 "arial";
+  letter-spacing: 2px;
+  color: white;
+  opacity: 0.8;
+}
+figure section {
+  width: 20vw;
+  height: 65vh;
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  margin-left: -10vw;
+  margin-top: -25vh;
+  transition: 1s;
+}
+figure section article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figure section article .card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transform-style: preserve-3d;
+  /* background-color: #f0f7ff; */
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+  transform: scale(0.8) rotateY(0deg);
+  transition: opacity 1s, transform 2s;
+  padding: 2vh;
+  overflow: hidden;
+}
+figure section article.on .card {
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
+figure section article .card.clickOn .front {
+  transform: rotateY(180deg);
+}
+
+figure section article .card.clickOn .back {
+  transform: rotateY(0deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  cursor: pointer;
+  background: white;
+  transition: 0.4s;
+}
+.front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.back {
+  background-color: white;
+  word-break: keep-all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: inherit;
+  transform: rotateY(180deg);
+}
+.back h3 {
+  text-align: center;
+  color: #222;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.back span {
+  color: #777;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.back p {
+  color: #222;
+  font-size: 15px;
+}
+.back .line {
+  width: 100%;
+  margin: 10% 0;
+}
+
+/* Left & Right btn CSS */
+figure .btnPrev {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20vw, -50%);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+}
+figure .btnPrev span {
+  font: normal 11px/1 "arial";
+  color: #fff;
+  opacity: 1;
+  transform: translateX(30%);
+  transition: 0.5s;
+}
+figure .btnPrev:hover span {
+  opacity: 0;
+  transform: translateX(100%);
+}
+figure .btnPrev::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-origin: left center;
+  transform: rotate(-180deg);
+  transition: 0.5s;
+}
+figure .btnPrev::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-origin: left center;
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+figure .btnPrev:hover::before {
+  transform: rotate(-30deg);
+}
+figure .btnPrev:hover::after {
+  transform: rotate(30deg);
+}
+
+figure .btnNext {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(20vw, -50%);
+  display: flex;
+  align-items: center;
+  text-align: right;
+  cursor: pointer;
+}
+figure .btnNext span {
+  font: normal 11px/1 "arial";
+  color: #fff;
+  opacity: 1;
+  transform: translateX(-30%);
+  transition: 0.5s;
+}
+figure .btnNext:hover span {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+figure .btnNext::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-origin: right center;
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+figure .btnNext::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-origin: right center;
+  transform: rotate(-180deg);
+  transition: 0.5s;
+}
+figure .btnNext:hover::before {
+  transform: rotate(30deg);
+}
+figure .btnNext:hover::after {
+  transform: rotate(-30deg);
+}

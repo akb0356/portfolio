@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈 - 이마트24</title>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/71fdac82e6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
+    <!-- custom -->
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div id="viewcontent">
+      <section id="mapservice">
+        <article class="mapservice-search">
+          <h3 class="mapservice-search-title">매장찾기</h3>
+          <div class="mapservice-search-group">
+            <div class="mapservice-searchbarwrap">
+              <input type="text" placeholder="매장명을 검색해주세요" />
+              <img
+                src="https://www.emart24.co.kr/assets/assets/imgs/searchYellow.png"
+                alt="searchicon"
+              />
+            </div>
+            <div class="mapservice-tagwrap">
+              <ul>
+                <li>
+                  <a href="/store?service=SVR_24">24시간</a>
+                </li>
+                <li>
+                  <a href="/store?service=SVR_PARCEL">택배</a>
+                </li>
+                <li>
+                  <a href="/store?service=SVR_ATM">ATM</a>
+                </li>
+                <li>
+                  <a href="/store?service=SVR_WINE">와인</a>
+                </li>
+                <li>
+                  <a href="/store?service=SVR_COFFEE">커피</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <figure class="mapservice-imgwrap">
+          <img
+            src="https://www.emart24.co.kr/assets/assets/imgs/mapPin.png"
+            alt=""
+            class="mapservice-pin"
+          />
+          <img
+            src="https://www.emart24.co.kr/assets/assets/imgs/mapPaper.png"
+            alt=""
+            class="mapservice-map"
+          />
+        </figure>
+      </section>
+      <section id="magazine">
+        <article class="magazine-title">
+          <div class="magazine-txt-wrap">
+            <h1>이마트24<br /><span>STORY</span></h1>
+            <p>이마트24의 다양한 스토리를 확인해 보세요.</p>
+          </div>
+          <div class="magazine-snsicon-wrap">
+            <ul>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCSQ0lVqv57JVw1lOdJ2vTVA?view_as=subscriber"
+                  target="_blank"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/emart24_official/"
+                  target="_blank"
+                  ><i class="fab fa-instagram-square"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/emart24.official"
+                  target="_blank"
+                >
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com/@emart24_official"
+                  target="_blank"
+                >
+                  <i class="fab fa-tiktok"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <figure class="magazine-sliderwrap">
+          <div class="magazine-swiper-button-prev">
+            <img
+              src="https://www.emart24.co.kr/assets/assets/imgs/tailArrow.png"
+              alt=""
+            />
+          </div>
+          <div class="magazine-swiper-button-next">
+            <img
+              src="https://www.emart24.co.kr/assets/assets/imgs/tailArrow.png"
+              alt=""
+            />
+          </div>
+          <ul class="swiper-wrapper"></ul>
+        </figure>
+      </section>
+      <section id="customer">
+        <article class="customer-notice">
+          <div class="customer-notice-titlewrap">
+            <h2>공지사항</h2>
+            <div class="customer-notice-button">
+              <a class="customer-notice-button-txt" href="/notice">
+                <span>전체보기</span>
+              </a>
+              <a class="customer-notice-button-img" href="/notice">
+                <img
+                  src="https://www.emart24.co.kr/assets/assets/imgs/more.png"
+                  alt="전체보기"
+                />
+              </a>
+            </div>
+          </div>
+          <ul class="customer-notice-lists">
+            <li class="customer-notice-list">
+              <a href="/notice/1522">
+                <h2 class="customer-notice-title">2022년(제 17기) 결산공고</h2>
+                <span class="customer-notice-date">2023.03.28</span>
+              </a>
+            </li>
+            <li class="customer-notice-list">
+              <a href="/notice/1522">
+                <h2 class="customer-notice-title">
+                  개인정보처리방침 개정 안내(2023.02.21)
+                </h2>
+                <span class="customer-notice-date">2023.02.14</span>
+              </a>
+            </li>
+            <li class="customer-notice-list">
+              <a href="/notice/1522">
+                <h2 class="customer-notice-title">기준일 설정 공고</h2>
+                <span class="customer-notice-date">2022.12.16</span>
+              </a>
+            </li>
+          </ul>
+        </article>
+        <article class="customer-news">
+          <div class="customer-notice-titlewrap">
+            <h2>보도자료</h2>
+            <div class="customer-notice-button">
+              <a class="customer-notice-button-txt" href="/press/">
+                <span>전체보기</span>
+              </a>
+              <a class="customer-notice-button-img" href="/press/">
+                <img
+                  src="https://www.emart24.co.kr/assets/assets/imgs/more.png"
+                  alt="전체보기"
+                />
+              </a>
+            </div>
+          </div>
+          <ul class="customer-notice-lists">
+            <li class="customer-notice-list">
+              <a href="/press/778">
+                <h2 class="customer-notice-title">
+                  이마트24, 대한민국 편의점 최초 싱가포르 진출!
+                </h2>
+                <span class="customer-notice-date">2022.12.23</span>
+              </a>
+            </li>
+            <li class="customer-notice-list">
+              <a href="/press/779">
+                <h2 class="customer-notice-title">
+                  이마트24, 혁신적인 모바일앱 우수성 입증! `스마트앱어워드 2022`
+                  종합쇼핑 부문 대상 수상!
+                </h2>
+                <span class="customer-notice-date">2022.12.21</span>
+              </a>
+            </li>
+            <li class="customer-notice-list">
+              <a href="/press/780">
+                <h2 class="customer-notice-title">
+                  이마트24 X bhc, `안 사면 손해` 파티팩 한정 판매
+                </h2>
+                <span class="customer-notice-date">2022.12.20</span>
+              </a>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

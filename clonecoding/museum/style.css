@@ -1,0 +1,1574 @@
+@import url(./reset.css);
+html {
+  color: #222;
+}
+
+#container {
+  max-width: 144rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.maincontentWrap {
+  width: 100%;
+  margin-top: 3.5rem;
+}
+
+section {
+  margin: 7rem 0;
+}
+
+.total-title {
+  margin-bottom: 3rem;
+}
+.total-title a {
+  font: 700 4.6rem "Noto Sans KR";
+}
+
+.pcHeader {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+}
+.pcHeader .navinfo {
+  position: relative;
+  z-index: 500;
+  width: 100%;
+  margin-top: 1rem;
+}
+.pcHeader .navinfo .utill {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.pcHeader .navinfo .utill li {
+  position: relative;
+  height: 4rem;
+  font: 400 1.4rem "Noto Sans KR";
+}
+.pcHeader .navinfo .utill li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 0.3rem;
+  background: #222;
+}
+.pcHeader .navinfo .utill li a {
+  padding: 1rem 1.5rem;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  font: 400 1.4rem "Noto Sans KR";
+  color: #444;
+}
+.pcHeader .navinfo .utill .museumLinkWrap,
+.pcHeader .navinfo .utill .languageWrap {
+  width: inherit;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.pcHeader .navinfo .utill .museumLinkWrap i,
+.pcHeader .navinfo .utill .languageWrap i {
+  font-size: 1.5rem;
+}
+.pcHeader .navinfo .utill .museumLinkWrap.clickon a,
+.pcHeader .navinfo .utill .languageWrap.clickon a {
+  background: #222;
+  color: white;
+}
+.pcHeader .navinfo .utill .museumLinkWrap.clickon a i,
+.pcHeader .navinfo .utill .languageWrap.clickon a i {
+  transform: rotate(180deg);
+}
+.pcHeader .navinfo .utill .museumLinkWrap .museumLink,
+.pcHeader .navinfo .utill .museumLinkWrap .language,
+.pcHeader .navinfo .utill .languageWrap .museumLink,
+.pcHeader .navinfo .utill .languageWrap .language {
+  display: none;
+  background: #222;
+  border-top: 1px solid #7c7c7c;
+}
+.pcHeader .navinfo .utill .museumLinkWrap .museumLink li a,
+.pcHeader .navinfo .utill .museumLinkWrap .language li a,
+.pcHeader .navinfo .utill .languageWrap .museumLink li a,
+.pcHeader .navinfo .utill .languageWrap .language li a {
+  color: white;
+  transition: color 0.3s;
+}
+.pcHeader .navinfo .utill .museumLinkWrap .museumLink li a:hover,
+.pcHeader .navinfo .utill .museumLinkWrap .language li a:hover,
+.pcHeader .navinfo .utill .languageWrap .museumLink li a:hover,
+.pcHeader .navinfo .utill .languageWrap .language li a:hover {
+  color: #fac906;
+  text-decoration-line: underline;
+}
+.pcHeader .navinfo .utill .snsList {
+  display: flex;
+  height: 100%;
+  padding: 0 1rem;
+}
+.pcHeader .navinfo .utill .snsList li > a > i {
+  font-size: 1.6rem;
+}
+.pcHeader nav {
+  z-index: 1;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pcHeader nav .logo {
+  width: 21rem;
+  height: 5.5rem;
+  background: url(https://www.museum.go.kr/ux/content/images/common/header_logo.png) center center/cover no-repeat;
+}
+.pcHeader nav .gnbWrap li {
+  float: left;
+  margin-right: 3.5rem;
+}
+.pcHeader nav .gnbWrap li:last-child {
+  margin-right: 0;
+}
+.pcHeader nav .gnbWrap li a {
+  position: relative;
+  font: 500 2.2rem "Noto Sans KR";
+  transition: all 0.3s;
+}
+.pcHeader nav .gnbWrap li a:hover {
+  color: #3f0b9f;
+}
+.pcHeader nav .gnbWrap li a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  width: 100%;
+  height: 0.5rem;
+  background: #3f0b9f;
+}
+.pcHeader nav .gnbWrap li > .sub-menu {
+  display: none;
+  position: absolute;
+  top: 14rem;
+  left: 0;
+  width: 100%;
+  background: #222;
+}
+.pcHeader nav .gnbWrap li > .sub-menu > ul {
+  padding-left: 27rem;
+  width: 100%;
+  display: flex;
+}
+.pcHeader nav .gnbWrap li > .sub-menu > ul li {
+  position: relative;
+  padding: 1.5rem 0;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.pcHeader nav .gnbWrap li > .sub-menu > ul li:hover > a {
+  color: #fac906;
+}
+.pcHeader nav .gnbWrap li > .sub-menu > ul li:hover > a::before {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 0.5rem;
+  background: #fac906;
+}
+.pcHeader nav .gnbWrap li > .sub-menu > ul li a {
+  font: 300 1.5rem "Noto Sans KR";
+  color: white;
+  transition: all 0.3s;
+}
+.pcHeader nav .join {
+  display: flex;
+}
+.pcHeader nav .join li {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.pcHeader nav .join li a {
+  color: #444;
+  font: 500 1.5rem "Noto Sans KR";
+}
+.pcHeader nav .join button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.pcHeader nav .join button i {
+  font-size: 2rem;
+}
+
+.mobileHeader {
+  display: none;
+}
+
+.searchArea {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 87rem;
+  background: url("https://www.museum.go.kr/ux/content/images/common/bg/bg_search.png") no-repeat center;
+  background-size: cover;
+  z-index: 1000;
+}
+.searchArea .searchNav {
+  display: flex;
+  max-width: 144rem;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+}
+.searchArea .searchNav .search-close {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background: url("https://www.museum.go.kr/ux/content/images/common/btn/btn_white_close.png") no-repeat center;
+  background-size: cover;
+  text-indent: -9999999px;
+}
+.searchArea form {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchArea form input {
+  border: none;
+  outline: none;
+  width: 50%;
+  height: 7rem;
+  padding: 1rem 3rem;
+  font: 2rem "NotoSansKR";
+  color: #222;
+}
+.searchArea form > button {
+  border: none;
+  background-color: #3f0b9f;
+  height: 7rem;
+  padding: 1rem 3rem;
+  color: white;
+  font: 500 2rem "NotoSansKR";
+}
+
+.mainSlide {
+  position: relative;
+  max-width: 144rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mainSlide > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.mainSlide > button > i {
+  font-size: 5rem;
+  color: #444;
+}
+.mainSlide #mainSlide-prev {
+  left: 1.5rem;
+}
+.mainSlide #mainSlide-next {
+  right: 1.5rem;
+}
+
+.mainSlide-wrapper {
+  position: relative;
+  display: flex;
+}
+.mainSlide-wrapper .main-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+}
+.mainSlide-wrapper .main-slide a img {
+  width: 100%;
+  height: 100%;
+}
+.mainSlide-wrapper .main-slide a .mainSlide-mobileimg {
+  display: none;
+}
+
+.mainSlide-pagination-wrapper {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.mainSlide-pagination-wrapper .mainSlide-pagination-span {
+  display: flex;
+  gap: 1.5rem;
+}
+.mainSlide-pagination-wrapper .mainSlide-pagination-span .swiper-pagination-bullet {
+  width: 2rem;
+  height: 2rem;
+  border: 0.5px solid #7c7c7c;
+  opacity: 1;
+  background: white;
+  border-radius: 50%;
+  text-indent: -9999999rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.mainSlide-pagination-wrapper .mainSlide-pagination-span .swiper-pagination-bullet-active {
+  background: #3f0b9f;
+  border: none;
+}
+.mainSlide-pagination-wrapper > button {
+  width: 5rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.mainSlide-pagination-wrapper > button i {
+  font-size: 2rem;
+  color: #7c7c7c;
+}
+
+.museumInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.museumInfo-infoArea,
+.museumInfo-gotoInfo {
+  position: relative;
+}
+
+.museumInfo-infoArea {
+  flex: 2;
+}
+.museumInfo-infoArea > ul::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0.3rem;
+  margin-top: 3rem;
+  background: #222;
+}
+.museumInfo-infoArea ul > .museumInfo-infoArea-info {
+  margin-bottom: 1rem;
+}
+
+.museumInfo-gotoInfo ul {
+  display: flex;
+  gap: 3rem;
+}
+.museumInfo-gotoInfo ul li {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.museumInfo-gotoInfo ul li::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0.3rem;
+  margin-top: 3rem;
+  background: #3f0b9f;
+}
+.museumInfo-gotoInfo ul li a {
+  padding: 1rem;
+  width: 100%;
+  font: 700 3rem "Noto Sans KR";
+  color: #3f0b9f;
+  transition: all 0.3s;
+}
+.museumInfo-gotoInfo ul li a::after {
+  z-index: -1;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 100rem;
+  width: 100%;
+  height: 100%;
+  background: #3f0b9f;
+  transition: all 0.8s ease;
+}
+.museumInfo-gotoInfo ul li:first-child a::after {
+  left: 0;
+}
+.museumInfo-gotoInfo ul li:first-child:hover > a {
+  color: white;
+  transition-delay: 0.7s;
+}
+.museumInfo-gotoInfo ul li:first-child:hover > a::after {
+  top: 0;
+}
+.museumInfo-gotoInfo ul li:last-child a::after {
+  left: 0;
+}
+.museumInfo-gotoInfo ul li:last-child:hover > a {
+  color: white;
+  transition-delay: 0.7s;
+}
+.museumInfo-gotoInfo ul li:last-child:hover > a::after {
+  top: 0;
+}
+
+.museumInfo-infoArea-info,
+.museumInfo-infoArea-admission {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.museumInfo-infoArea-info h3,
+.museumInfo-infoArea-admission h3 {
+  font: 700 2.4rem "Noto Sans KR";
+}
+.museumInfo-infoArea-info h3 i,
+.museumInfo-infoArea-admission h3 i {
+  font-size: 2.4rem;
+  margin-right: 1rem;
+}
+.museumInfo-infoArea-info > ul,
+.museumInfo-infoArea-admission > ul {
+  display: flex;
+  gap: 1rem;
+}
+.museumInfo-infoArea-info > ul li,
+.museumInfo-infoArea-admission > ul li {
+  display: flex;
+  gap: 1rem;
+}
+.museumInfo-infoArea-info > ul li > h5, .museumInfo-infoArea-info > ul li > span,
+.museumInfo-infoArea-admission > ul li > h5,
+.museumInfo-infoArea-admission > ul li > span {
+  font-size: 1.8rem;
+}
+
+.exhibition-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.exhibition-info-titlewrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exhibition-pagination span {
+  cursor: pointer;
+}
+.exhibition-pagination span .fas {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+.exhibition-pagination span .fa-angle-right {
+  margin-right: 0;
+}
+
+.exhibition-slide-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.exhibition-slide-container .exhibition-slide-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.exhibition-slide-container .exhibition-slide-wrapper .exhibition-slide > a {
+  position: relative;
+  display: inline-block;
+}
+.exhibition-slide-container .exhibition-slide-wrapper .exhibition-slide > a:hover .exhibition-slide-hoverText {
+  opacity: 1;
+}
+
+.exhibition-slide-img {
+  width: 31.5rem;
+  height: 45rem;
+}
+.exhibition-slide-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.exhibition-slide-hoverText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.exhibition-slide-hoverText span {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  font: 400 3rem "Noto Sans KR";
+  color: white;
+}
+.exhibition-slide-hoverText::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.exhibition-slide-detail {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+.exhibition-slide-detail .exhibition-slide-detail-btn {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+}
+.exhibition-slide-detail .exhibition-slide-detail-btn span {
+  display: inline-block;
+  border: 1px solid #222;
+  min-width: 6rem;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  font: 400 1.6rem "Noto Sans KR";
+}
+.exhibition-slide-detail .exhibition-slide-detail-btn .exhibit-current {
+  background: #222;
+  color: white;
+}
+.exhibition-slide-detail a {
+  font: 500 1.8rem "Noto Sans KR";
+  word-break: keep-all;
+}
+.exhibition-slide-detail a:hover {
+  text-decoration-line: underline;
+}
+.exhibition-slide-detail p {
+  font: 400 1.6rem "Noto Sans KR";
+  color: #444;
+}
+
+.notice {
+  width: 100%;
+  height: 100%;
+}
+
+.total-title > i {
+  font-size: 4.6rem;
+  margin-right: 1.5rem;
+}
+
+.notice-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notice-contents {
+  border-bottom: 1px solid #7c7c7c;
+  width: 48%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.notice-contents iframe {
+  width: 100%;
+  height: 38rem;
+}
+.notice-contents .notice-content-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #7c7c7c;
+}
+.notice-contents .notice-content-tab > a {
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notice-contents .notice-content-tab > a i {
+  font-size: 1.6rem;
+}
+
+.notice-content-button > button {
+  width: 13rem;
+  padding: 1rem;
+  background: none;
+  border: none;
+  font: 400 2rem "Noto Sans KR";
+  color: #7c7c7c;
+  cursor: pointer;
+}
+.notice-content-button > button.notice-btn-active {
+  border-bottom: 3px solid #222;
+  font-weight: 800;
+  color: #222;
+}
+
+.notice-banner {
+  width: 48%;
+}
+.notice-banner .notice-banner-container {
+  position: relative;
+  overflow: hidden;
+}
+.notice-banner .notice-banner-container .notice-banner-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.notice-banner .notice-banner-container .notice-banner-wrapper .notice-banner-slide a {
+  display: block;
+  width: inherit;
+  height: 100%;
+}
+.notice-banner .notice-banner-container .notice-banner-wrapper .notice-banner-slide a img {
+  width: 100%;
+  height: 100%;
+}
+
+.notice-pagination-wrapper {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.notice-pagination-wrapper .notice-pagination-span .swiper-pagination-bullet {
+  width: 2rem;
+  height: 2rem;
+  border: 0.5px solid #7c7c7c;
+  opacity: 1;
+  background: white;
+  border-radius: 50%;
+  text-indent: -9999999rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.notice-pagination-wrapper .notice-pagination-span .swiper-pagination-bullet-active {
+  background: #3f0b9f;
+  border: none;
+}
+.notice-pagination-wrapper > button {
+  width: 5rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.notice-pagination-wrapper > button i {
+  font-size: 2rem;
+  color: #7c7c7c;
+}
+
+.etcInfo {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.etcInfo-title {
+  display: flex;
+  margin-bottom: 3rem;
+}
+.etcInfo-title a {
+  font: 700 3rem "Noto Sans KR";
+}
+
+.etcInfo-education {
+  width: 25%;
+}
+.etcInfo-education .etcInfo-education-container img {
+  width: 100%;
+  border: 1px solid #7c7c7c;
+  margin-bottom: 3rem;
+}
+.etcInfo-education .etcInfo-education-container h3 a {
+  font: 500 2.4rem "Noto Sans KR";
+}
+.etcInfo-education .etcInfo-education-container h3:hover a {
+  text-decoration: underline;
+}
+
+.etcInfo-event {
+  position: relative;
+  width: 20.5%;
+}
+.etcInfo-event .etcInfo-event-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.etcInfo-event .etcInfo-event-title > .etcInfo-title {
+  margin-bottom: 0;
+}
+.etcInfo-event .etcInfo-event-pagination {
+  width: 7rem;
+  position: relative;
+}
+.etcInfo-event .etcInfo-event-pagination .etcInfo-event-pagination-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.etcInfo-event .etcInfo-event-pagination .etcInfo-event-pagination-number span {
+  font: 400 1.6rem "Noto Sans KR";
+}
+.etcInfo-event .etcInfo-event-pagination .etcInfo-event-pagination-button {
+  position: absolute;
+  display: flex;
+  gap: 5rem;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.etcInfo-event .etcInfo-event-pagination .etcInfo-event-pagination-button > button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.etcInfo-event .etcInfo-event-pagination .etcInfo-event-pagination-button > button i {
+  font-size: 2rem;
+}
+.etcInfo-event .etcInfo-event-slide-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.etcInfo-event .etcInfo-event-slide-container .etcInfo-event-slide-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.etcInfo-event .etcInfo-event-slide-container .etcInfo-event-slide-wrapper .etcInfo-event-slide {
+  height: 100%;
+  flex-shrink: 0;
+}
+.etcInfo-event .etcInfo-event-slide-container .etcInfo-event-slide-wrapper .etcInfo-event-slide img {
+  width: 100%;
+}
+
+.etcInfo-online {
+  width: 46.5%;
+}
+.etcInfo-online .etcInfo-online-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.etcInfo-online .etcInfo-online-title > .etcInfo-title {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 0;
+}
+.etcInfo-online .etcInfo-online-title > .etcInfo-title > a:last-child {
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.etcInfo-online .etcInfo-online-title > .etcInfo-title > a:last-child i {
+  font-size: 1.6rem;
+}
+.etcInfo-online .etcInfo-online-title .etcInfo-online-pagination {
+  width: 7rem;
+  position: relative;
+}
+.etcInfo-online .etcInfo-online-title .etcInfo-online-pagination .etcInfo-online-pagination-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.etcInfo-online .etcInfo-online-title .etcInfo-online-pagination .etcInfo-online-pagination-number span {
+  font: 400 1.6rem "Noto Sans KR";
+}
+.etcInfo-online .etcInfo-online-title .etcInfo-online-pagination .etcInfo-online-pagination-button {
+  position: absolute;
+  display: flex;
+  gap: 5rem;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.etcInfo-online .etcInfo-online-title .etcInfo-online-pagination .etcInfo-online-pagination-button > button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.etcInfo-online .etcInfo-online-title .etcInfo-online-pagination .etcInfo-online-pagination-button > button i {
+  font-size: 2rem;
+}
+
+.etcInfo-online-slide-container {
+  position: relative;
+  overflow: hidden;
+}
+.etcInfo-online-slide-container .etcInfo-online-slide-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.etcInfo-online-slide-container .etcInfo-online-slide-wrapper .etcInfo-online-slide {
+  position: relative;
+  height: 100%;
+}
+.etcInfo-online-slide-container .etcInfo-online-slide-wrapper .etcInfo-online-slide .etcInfo-online-slide-imgwrap {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  min-height: 38.9rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+.etcInfo-online-slide-container .etcInfo-online-slide-wrapper .etcInfo-online-slide .etcInfo-online-slide-imgwrap a {
+  display: block;
+  width: 67rem;
+  height: 100%;
+}
+.etcInfo-online-slide-container .etcInfo-online-slide-wrapper .etcInfo-online-slide .etcInfo-online-slide-imgwrap a img {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.etcInfo-online-slide-container .etcInfo-online-slide-wrapper .etcInfo-online-slide .etcInfo-online-slide-imgwrap a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 8.5rem;
+  height: 8.5rem;
+  background: url(https://www.museum.go.kr/ux/content/images/common/ico/ico_video.png) no-repeat center;
+  z-index: 10;
+}
+
+.etcInfo-slide-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.etcInfo-slide-txt a {
+  font: 500 2.4rem "Noto Sans KR";
+}
+.etcInfo-slide-txt a:hover {
+  text-decoration: underline;
+}
+.etcInfo-slide-txt span {
+  font: 300 1.8rem "Noto Sans KR";
+}
+
+footer {
+  padding: 1.5rem 0;
+}
+footer ul li {
+  margin-bottom: 1.5rem;
+}
+footer ul li a {
+  font: 400 1.5rem "Noto Sans KR";
+  color: #7c7c7c;
+}
+
+.footerMenuWrap {
+  border-top: 1px solid #c8c8c8;
+  padding: 7.5rem 0 6rem 0;
+}
+.footerMenuWrap > ul {
+  display: flex;
+  justify-content: space-between;
+}
+.footerMenuWrap > ul > li {
+  flex: 1;
+}
+.footerMenuWrap > ul > li .footerMenuTop-submenu {
+  margin-top: 1.5rem;
+}
+.footerMenuWrap > ul > li .footerMenuTop-submenu li:hover a {
+  font-weight: 700;
+  color: #3f0b9f;
+  text-decoration: underline;
+}
+.footerMenuWrap > ul > li > a {
+  font: 500 2rem "Noto Sans KR";
+  color: #222;
+}
+.footerMenuWrap .footerMenuBottom {
+  margin-top: 3rem;
+}
+.footerMenuWrap .footerMenuBottom li {
+  flex: initial;
+}
+.footerMenuWrap .footerMenuBottom li a img {
+  width: 2rem;
+}
+
+.footerMenuTop > li:nth-child(3) img {
+  margin-left: 0.5rem;
+  width: 10%;
+}
+
+.footerLinkWrap {
+  padding: 5.5rem 0;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+}
+.footerLinkWrap div ul li a {
+  color: #222;
+}
+.footerLinkWrap .footerLink:first-child ul li a {
+  font: 500 1.8rem "Noto Sans KR";
+}
+.footerLinkWrap .footerLink:first-child ul li:hover a {
+  text-decoration: underline;
+}
+.footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite.clickon > a {
+  background: #222;
+  color: white;
+}
+.footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite.clickon > a i {
+  color: white;
+  transform: rotate(180deg);
+}
+.footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite > a {
+  padding: 1.2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 4.5rem;
+  border-bottom: 2px solid #444;
+}
+.footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite > a span {
+  width: 100%;
+  text-align: left;
+  font: 400 1.6rem "Noto Sans KR";
+}
+.footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite > a i {
+  font-size: 1.6rem;
+}
+.footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite > ul {
+  display: none;
+  background: #222;
+  position: absolute;
+  width: 100%;
+  bottom: 100%;
+  z-index: 10;
+  transition: bottom 2s;
+}
+.footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite > ul li {
+  padding: 1.5rem 1rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+.footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite > ul li a {
+  font: 400 1.4rem "Noto Sans KR";
+  color: rgba(204, 204, 204, 0.8);
+}
+.footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite > ul li:hover a {
+  color: #fac906;
+  text-decoration: underline;
+}
+.footerLinkWrap .footerLink:nth-child(3) ul li strong a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.footerLinkWrap .footerLink:nth-child(3) ul li a {
+  font: 400 1.6rem "Noto Sans KR";
+  color: #444;
+}
+.footerLinkWrap .footerLink:nth-child(3) ul li:hover a {
+  text-decoration: underline;
+}
+.footerLinkWrap .footerLink:nth-child(3) .footerLink-mobile {
+  display: none;
+}
+.footerLinkWrap .footerLink:last-child ul .footerLink-snslist > ul {
+  display: flex;
+  gap: 3rem;
+  justify-content: flex-end;
+}
+.footerLinkWrap .footerLink:last-child ul .footerLink-snslist > ul li a i {
+  font-size: 3rem;
+}
+.footerLinkWrap .footerLink:last-child ul .footerLink-address {
+  text-align: right;
+}
+.footerLinkWrap .footerLink:last-child ul .footerLink-address p {
+  font: 400 1.5rem/2 "Noto Sans KR";
+}
+.footerLinkWrap .footerLink:last-child ul .footerLink-webinfo {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footerLinkWrap .footerLink:last-child ul .footerLink-webinfo a img {
+  width: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media all and (max-width: 995px) {
+  section {
+    padding: 10rem 4rem;
+  }
+  .maincontentWrap {
+    margin: 0 auto;
+  }
+  .searchArea form input {
+    width: 70%;
+    height: 10rem;
+    font-size: 4rem;
+  }
+  .searchArea form button {
+    height: 10rem;
+    font-size: 4rem;
+  }
+  .pcHeader {
+    display: none;
+  }
+  .mobileHeader {
+    position: relative;
+    display: block;
+  }
+  .mobileInfo {
+    width: 100%;
+    height: 16rem;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobileInfo .mob-logo {
+    width: 27rem;
+    height: 7rem;
+    background: url(https://www.museum.go.kr/ux/content/images/common/header_logo.png) center center/cover no-repeat;
+  }
+  .mobileInfo .mob-header-icon button {
+    border: none;
+    background: none;
+    margin-right: 4rem;
+    cursor: pointer;
+  }
+  .mobileInfo .mob-header-icon button i {
+    font-size: 4rem;
+  }
+  .mobileInfo .mob-header-icon button:last-child {
+    margin-right: 0;
+  }
+  .mobileHeader-sideMenuWrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    background: white;
+    transition: right 1s;
+  }
+  .mobileHeader-sideMenu-Top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+  }
+  .mobileHeader-sideMenu-Top .mobileHeader-language a {
+    position: relative;
+    display: block;
+    font-size: 3rem;
+    padding: 3rem 4rem;
+  }
+  .mobileHeader-sideMenu-Top .mobileHeader-language a i {
+    font-size: 3rem;
+  }
+  .mobileHeader-sideMenu-Top .mobileHeader-language a::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.7rem;
+    background: #222;
+  }
+  .mobileHeader-sideMenu-Top .mobileHeader-language ul {
+    display: none;
+  }
+  .mobileHeader-sideMenu-Top .mobileHeader-language.clickon {
+    color: white;
+  }
+  .mobileHeader-sideMenu-Top .mobileHeader-language.clickon a {
+    background: #222;
+  }
+  .mobileHeader-sideMenu-Top .mobileHeader-language.clickon a i {
+    transform: rotate(180deg);
+  }
+  .mobileHeader-sideMenu-Top .mobileHeader-language.clickon ul {
+    display: block;
+    border-top: 1px solid #7c7c7c;
+    background: #222;
+    width: 100%;
+    text-align: center;
+  }
+  .mobileHeader-sideMenu-Top .mobileHeader-language.clickon ul li > a {
+    padding: 2rem;
+  }
+  .mobileHeader-sideMenu-Top .mobileHeader-language.clickon ul li:hover {
+    color: #fac906;
+    text-decoration: underline;
+  }
+  .mobileHeader-sideMenu-Top button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 3rem;
+  }
+  .mobileHeader-sideMenu-Top button i {
+    font-size: 4.5rem;
+  }
+  .mobileHeader-sideMenu-Total {
+    padding: 0 4rem;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-sideMenu-loginInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-sideMenu-loginInfo h3 a {
+    font: 700 5rem "Noto Sans KR";
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-sideMenu-loginInfo .loginInfoWrap {
+    display: flex;
+    gap: 3rem;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-sideMenu-loginInfo .loginInfoWrap p a {
+    font: 500 3.5rem "Noto Sans KR";
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-sideMenu-group {
+    margin: 5rem 0;
+    padding: 3rem 5rem;
+    background: #eee;
+    border-top: 1px solid #444;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-sideMenu-group ul {
+    display: grid;
+    grid-template: auto auto auto/auto auto;
+    gap: 2rem;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-sideMenu-group ul li i {
+    font-size: 3.5rem;
+    margin-right: 2rem;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-sideMenu-group ul li a {
+    font-size: 3rem;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-slide-Menu {
+    padding-bottom: 10rem;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-slide-Menu .mobileHeader-slide-gnbWrap > li {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-slide-Menu .mobileHeader-slide-gnbWrap > li a {
+    font: 500 3.5rem "Noto Sans KR";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-slide-Menu .mobileHeader-slide-gnbWrap > li a i {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: url(https://www.museum.go.kr/ux/content/images/common/ico/ico_lg_black_close.png) no-repeat 98%;
+    background-size: contain;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-slide-Menu .mobileHeader-slide-gnbWrap > li.clickon a i {
+    transform: rotate(180deg);
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-slide-Menu .mobileHeader-slide-gnbWrap .mobileHeader-slide-sub-menu {
+    display: none;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-slide-Menu .mobileHeader-slide-gnbWrap .mobileHeader-slide-sub-menu li {
+    padding: 1.5rem 0;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-slide-Menu .mobileHeader-slide-gnbWrap .mobileHeader-slide-sub-menu li:first-child {
+    margin-top: 2rem;
+  }
+  .mobileHeader-sideMenu-Total .mobileHeader-slide-Menu .mobileHeader-slide-gnbWrap .mobileHeader-slide-sub-menu li a {
+    font: 400 3.5rem "Noto Sans KR";
+  }
+  .mobileHeaderDim {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 90;
+  }
+  .mainSlide a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .mainSlide a .mainSlide-pcimg {
+    display: none;
+  }
+  .mainSlide a .mainSlide-mobileimg {
+    display: block !important;
+  }
+  .mainSlide > button {
+    display: none;
+  }
+  .mainSlide .mainSlide-pagination-wrapper {
+    bottom: 5rem;
+    right: 5rem;
+  }
+  .mainSlide .mainSlide-pagination-wrapper .mainSlide-pagination-span .swiper-pagination-bullet {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .mainSlide .mainSlide-pagination-wrapper > button {
+    width: 7rem;
+    height: 6rem;
+  }
+  .mainSlide .mainSlide-pagination-wrapper > button i {
+    font-size: 3rem;
+  }
+  .museumInfo {
+    flex-direction: column;
+    align-items: start;
+  }
+  .museumInfo .museumInfo-infoArea {
+    width: 100%;
+  }
+  .museumInfo .museumInfo-infoArea::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0.5rem;
+    background: #222;
+    margin: 8rem 0;
+  }
+  .museumInfo .museumInfo-infoArea ul > li {
+    flex-direction: column;
+    align-items: start;
+  }
+  .museumInfo .museumInfo-infoArea ul > li > ul {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .museumInfo .museumInfo-infoArea ul > li > ul li {
+    flex-direction: row;
+  }
+  .museumInfo .museumInfo-infoArea ul > li > ul li h5 {
+    font: 700 3rem "Noto Sans KR";
+    width: 40rem;
+  }
+  .museumInfo .museumInfo-infoArea ul > li > ul li span {
+    font-size: 3rem;
+  }
+  .museumInfo .museumInfo-infoArea ul > li > ul .museumInfo-infoArea-admission {
+    border: 1px solid red;
+  }
+  .museumInfo .museumInfo-infoArea ul > li h3,
+  .museumInfo .museumInfo-infoArea ul > li i {
+    font-size: 5rem;
+  }
+  .museumInfo .museumInfo-infoArea ul > li i {
+    margin-right: 3rem;
+  }
+  .museumInfo .museumInfo-infoArea ul .museumInfo-infoArea-admission {
+    margin-top: 12rem;
+  }
+  .museumInfo .museumInfo-infoArea ul::after {
+    display: none;
+  }
+  .museumInfo .museumInfo-gotoInfo {
+    margin: 0 auto;
+  }
+  .museumInfo .museumInfo-gotoInfo ul li a {
+    font-size: 5rem;
+  }
+  .museumInfo .museumInfo-gotoInfo ul li::after {
+    height: 0.5rem;
+  }
+  .total-title i {
+    font-size: 6rem;
+    margin-right: 2rem;
+  }
+  .total-title a {
+    font-size: 6rem;
+  }
+  .exhibition-pagination span {
+    margin-right: 3rem;
+  }
+  .exhibition-pagination span i {
+    font-size: 5rem !important;
+  }
+  .exhibition-pagination span:last-child {
+    margin-right: 0;
+  }
+  .exhibition-slide-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .exhibition-slide-container .exhibition-slide-wrapper .exhibition-slide > a {
+    width: inherit;
+  }
+  .exhibition-slide-container .exhibition-slide-wrapper .exhibition-slide > a .exhibition-slide-img {
+    margin: 0 auto;
+    width: auto;
+    height: 80rem;
+  }
+  .exhibition-slide-container .exhibition-slide-wrapper .exhibition-slide > a .exhibition-slide-img img {
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .exhibition-slide-container .exhibition-slide-wrapper .exhibition-slide > a .exhibition-slide-hoverText {
+    display: none;
+  }
+  .exhibition-slide-container .exhibition-slide-wrapper .exhibition-slide .exhibition-slide-detail .exhibition-slide-detail-btn {
+    margin-top: 6rem;
+    gap: 2rem;
+  }
+  .exhibition-slide-container .exhibition-slide-wrapper .exhibition-slide .exhibition-slide-detail .exhibition-slide-detail-btn span {
+    font-size: 3rem;
+  }
+  .exhibition-slide-container .exhibition-slide-wrapper .exhibition-slide .exhibition-slide-detail a {
+    font-size: 3.5rem;
+  }
+  .exhibition-slide-container .exhibition-slide-wrapper .exhibition-slide .exhibition-slide-detail p {
+    font-size: 3rem;
+  }
+  .notice-wrap {
+    flex-direction: column;
+    gap: 8rem;
+  }
+  .notice-wrap .notice-contents {
+    width: 100%;
+  }
+  .notice-wrap .notice-contents iframe {
+    width: 100%;
+    height: 60rem;
+  }
+  .notice-wrap .notice-contents .notice-content-tab a {
+    display: none;
+  }
+  .notice-wrap .notice-contents .notice-content-button {
+    width: 100%;
+    display: flex;
+  }
+  .notice-wrap .notice-contents .notice-content-button button {
+    width: 25%;
+    padding: 1.5rem;
+    font-size: 3.5rem;
+  }
+  .notice-wrap .notice-banner {
+    width: 100%;
+  }
+  .etcInfo {
+    flex-direction: column;
+    gap: 6rem;
+  }
+  .etcInfo .etcInfo-education,
+  .etcInfo .etcInfo-event,
+  .etcInfo .etcInfo-online {
+    width: 100%;
+  }
+  .etcInfo .etcInfo-title > a {
+    font-size: 6rem;
+  }
+  .etcInfo .etcInfo-education-container h3 > a {
+    font-size: 4rem;
+  }
+  .etcInfo .etcInfo-event .etcInfo-event-pagination {
+    width: 15rem;
+  }
+  .etcInfo .etcInfo-event .etcInfo-event-pagination .etcInfo-event-pagination-number > span {
+    font-size: 4rem;
+  }
+  .etcInfo .etcInfo-event .etcInfo-event-pagination .etcInfo-event-pagination-button {
+    gap: 9rem;
+  }
+  .etcInfo .etcInfo-event .etcInfo-event-pagination .etcInfo-event-pagination-button > button > i {
+    font-size: 5rem;
+  }
+  .etcInfo .etcInfo-event .etcInfo-slide-txt > a {
+    font-size: 4rem;
+  }
+  .etcInfo .etcInfo-event .etcInfo-slide-txt > span {
+    font-size: 3rem;
+  }
+  .etcInfo .etcInfo-online .etcInfo-online-title .etcInfo-title > a:last-child {
+    width: 5rem;
+    height: 5rem;
+  }
+  .etcInfo .etcInfo-online .etcInfo-online-title .etcInfo-title > a:last-child i {
+    font-size: 3rem;
+  }
+  .etcInfo .etcInfo-online .etcInfo-online-pagination {
+    width: 15rem;
+  }
+  .etcInfo .etcInfo-online .etcInfo-online-pagination .etcInfo-online-pagination-number > span {
+    font-size: 4rem;
+  }
+  .etcInfo .etcInfo-online .etcInfo-online-pagination .etcInfo-online-pagination-button {
+    gap: 9rem;
+  }
+  .etcInfo .etcInfo-online .etcInfo-online-pagination .etcInfo-online-pagination-button > button > i {
+    font-size: 5rem;
+  }
+  .etcInfo .etcInfo-online .etcInfo-online-slide-container .etcInfo-online-slide-wrapper .etcInfo-online-slide {
+    width: inherit;
+    flex: 0 0 100%;
+  }
+  .etcInfo .etcInfo-online .etcInfo-online-slide-container .etcInfo-online-slide-wrapper .etcInfo-online-slide .etcInfo-online-slide-imgwrap {
+    height: 50rem;
+  }
+  .etcInfo .etcInfo-online .etcInfo-online-slide-container .etcInfo-online-slide-wrapper .etcInfo-online-slide .etcInfo-online-slide-imgwrap a::before {
+    width: 20rem;
+    height: 20rem;
+  }
+  .etcInfo .etcInfo-online .etcInfo-online-slide-container .etcInfo-online-slide-wrapper .etcInfo-online-slide .etcInfo-slide-txt a {
+    font-size: 4rem;
+  }
+  .footerMenuWrap,
+  .footerLinkWrap {
+    padding: 7.5rem 4rem;
+  }
+  .footerMenuWrap .footerMenuTop {
+    display: none;
+  }
+  .footerMenuWrap .footerMenuBottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .footerMenuWrap .footerMenuBottom li > a {
+    font-size: 3.5rem;
+  }
+  .footerMenuWrap .footerMenuBottom li > a > img {
+    width: 3.3rem;
+  }
+  .footerLinkWrap {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(1) ul > li > a {
+    font-size: 3.5rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(2) {
+    gap: 6rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite a {
+    padding: 2rem 0rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite a span,
+  .footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite a i {
+    font-size: 3.5rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite > ul li {
+    padding: 3rem 2rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(2) .footerLink-familysite > ul li a {
+    font-size: 3.5rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(3) ul:first-child {
+    display: none;
+  }
+  .footerLinkWrap .footerLink:nth-child(3) .footerLink-mobile {
+    display: block;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(3) .footerLink-mobile li a {
+    font-size: 4rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(4) ul .footerLink-snslist > ul {
+    justify-content: center;
+    gap: 5rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(4) ul .footerLink-snslist > ul li a i {
+    font-size: 5rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(4) ul .footerLink-address {
+    text-align: left;
+  }
+  .footerLinkWrap .footerLink:nth-child(4) ul .footerLink-address p {
+    font-size: 3rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(4) ul .footerLink-address p:last-child {
+    margin-top: 3rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(4) ul .footerLink-webinfo {
+    justify-content: center;
+    gap: 10rem;
+    padding-top: 3rem;
+  }
+  .footerLinkWrap .footerLink:nth-child(4) ul .footerLink-webinfo a > img {
+    width: 30rem;
+  }
+}/*# sourceMappingURL=style.css.map */
